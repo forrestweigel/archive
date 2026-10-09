@@ -1,9 +1,107 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Archive Website — Codex Instructions
 
-## This is NOT the Next.js you know
+## Project
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+This repository contains the official website for **Archive**, a Magic: The Gathering Commander variant.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+- Website: `playarchivemtg.com`
+- Current rules release: **Alpha**
+- Canonical rules source: `RULES.md`
+- Product/context source: `.agents/skills/archive-format/SKILL.md`
 
-<!-- END:nextjs-agent-rules -->
+## Source of truth
+
+Before making changes that involve Archive rules, terminology, gameplay explanations, FAQs, onboarding, or examples:
+
+1. Read `RULES.md`.
+2. Read `.agents/skills/archive-format/SKILL.md` when broader product, design, or website context is relevant.
+3. Treat `RULES.md` as authoritative if any other project copy conflicts with it.
+4. Do not invent, infer, rebalance, or silently modify Archive rules.
+5. If a requested feature exposes an unresolved rules question, flag it for the project owner instead of inventing an answer.
+
+Only current Archive rules belong in public-facing copy. Do not add speculative mechanics or alternate rules unless explicitly requested.
+
+## Frontend requirement
+
+Use **shadcn/ui components for the frontend**.
+
+- Prefer shadcn/ui primitives and composition patterns for buttons, cards, navigation, dialogs, forms, accordions, tabs, tooltips, sheets, alerts, and other applicable interface elements.
+- Use Tailwind CSS for styling and layout in the normal shadcn/ui pattern.
+- Extend shadcn components through project styling rather than introducing a competing component library.
+- Do not add another general-purpose frontend component framework without explicit approval.
+- Keep custom components focused on Archive-specific presentation such as the 99 → 40 + 59 setup diagram.
+
+## Visual direction
+
+Use [the official Magic website](https://magic.wizards.com/en) as the visual reference for hierarchy, composition, and presentation. Adapt its confident, promotional game-site direction to Archive’s own identity.
+
+- A dark navigation bar with a prominent Archive wordmark and clear navigation
+- Large, immersive hero sections with bold display headings, concise supporting copy, and prominent calls to action
+- Image-led composition where original or explicitly supplied assets are available
+- Contrasting dark and light sections that give onboarding, rules, and resources distinct visual emphasis
+- Warm orange/red interaction accents, strong filled buttons, and clear secondary actions
+- **Gotham Narrow** for all headings and display typography
+- **Open Sans** for body text and supporting interface copy
+- Load the supplied `app/fonts/GothamNarrow-Bold.woff2` (700) and `app/fonts/GothamNarrow-Black.woff2` (900) through `next/font/local`; use Black for primary display headings and Bold for other headings
+- Editorial grids and resource cards with strong headings and generous spacing
+- Mobile-first layouts that retain the same hierarchy on smaller screens
+- Accessible contrast, visible focus states, semantic structure, and keyboard navigation
+
+The site should feel like a polished game website with an inviting, energetic presentation. Keep Archive’s setup diagram and rules easy to understand within that presentation.
+
+Use the reference for design direction, not as a template to copy. Preserve original Archive branding; do not reuse Magic logos, artwork, mana symbols, card frames, or imply Wizards of the Coast affiliation. Do not add decorative imagery that makes rules harder to read.
+
+## Product priorities
+
+The site should help a Commander player answer these questions quickly:
+
+1. What is Archive?
+2. Can I use my existing Commander deck?
+3. How do I set up a game?
+4. What rules are different?
+5. Where can I read the complete rules?
+6. Where can I get the reference card?
+7. How can I submit playtest feedback?
+
+The key onboarding message is that **players use their existing legal Commander decks without rebuilding them**.
+
+The defining setup visual is:
+
+`99 cards → 40-card Library + 59-card Archive`
+
+## Planned site areas
+
+The initial site should support:
+
+- Homepage / How to Play
+- Complete Rules
+- FAQ
+- Downloadable Reference Card
+- Playtest Feedback
+- Changelog / release information
+
+Keep the initial information architecture small. Avoid adding community, account, social, deckbuilding, or content features unless requested.
+
+## Content conventions
+
+Use **Archive Alpha** or **Alpha** for the current release. Do not label the current format `v0.2`.
+
+Capitalize defined format terms consistently:
+
+- Archive
+- Library
+- Failed Search
+- Archive Exchange
+
+Use concise explanations. The homepage should teach the format quickly; `RULES.md` should drive the detailed rules page and FAQ.
+
+## Development behavior
+
+When implementing:
+
+- Reuse shadcn/ui components before creating generic UI primitives.
+- Keep rules content easy to update.
+- Avoid duplicating canonical rule text across hard-coded components when a maintainable content source is practical.
+- Preserve responsive behavior and accessibility.
+- Do not let visual polish obscure rules clarity.
+- Do not use trademarked Magic artwork, mana symbols, card frames, or other proprietary visual assets unless the project owner supplies assets and explicitly asks for their use.
