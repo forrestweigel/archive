@@ -1,69 +1,274 @@
-import Image from "next/image";
-
+import Link from "next/link";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Download,
+  BookOpen,
+  MessageSquare,
+  Shuffle,
+  Layers,
+  Repeat2,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { DeckSplit } from "@/components/deck-split";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-heading font-black leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className="hero">
+        <div className="hero-art" aria-hidden="true">
+          <div className="art-orbit orbit-one" />
+          <div className="art-orbit orbit-two" />
+          <div className="art-slab slab-one" />
+          <div className="art-slab slab-two" />
+          <div className="art-slab slab-three" />
+          <div className="art-horizon" />
+        </div>
+        <div className="shell hero-content">
+          <p className="eyebrow">
+            <span className="status-dot" /> A NEW WAY TO PLAY COMMANDER
           </p>
+          <h1>
+            YOUR DECK.
+            <br />A DIFFERENT
+            <br />
+            <span>STORY.</span>
+          </h1>
+          <p className="hero-description">
+            Meet Archive. The Commander variant that turns the deck you know
+            into a game you don’t.
+          </p>
+          <p className="hero-note">
+            Same deck. No rebuilding. New possibilities.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <Link href="#how-to-play">
+                Learn to play <ArrowRight />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white/40 text-white"
+            >
+              <Link href="/rules">Read the rules</Link>
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-bottom shell">
+          <span>COMMANDER, REDISCOVERED.</span>
+          <span className="flex items-center gap-2">
+            <span className="status-dot" /> ALPHA · READY TO PLAY
+          </span>
         </div>
-      </main>
-    </div>
+      </section>
+      <div className="manifesto-bar">
+        <div className="shell flex flex-wrap items-center justify-center gap-x-12 gap-y-3">
+          <span>
+            <Shuffle /> BRING YOUR COMMANDER DECK
+          </span>
+          <span>
+            <Layers /> SPLIT THE POSSIBILITIES
+          </span>
+          <span>
+            <Repeat2 /> PLAY A DIFFERENT GAME
+          </span>
+        </div>
+      </div>
+      <section id="how-to-play" className="section-paper section-pad">
+        <div className="shell">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">01 / THE SETUP</p>
+              <h2>
+                ONE DECK.
+                <br />
+                TWO PILES. LET’S PLAY.
+              </h2>
+            </div>
+            <p>
+              Bring your existing legal Commander deck. Put your commander in
+              the command zone, then shuffle the other 99 cards. No rebuilding
+              required.
+            </p>
+          </div>
+          <DeckSplit />
+          <div className="setup-caption">
+            <p>
+              <strong>Don’t look. Don’t choose.</strong> The top 40 become your
+              Library. The remaining 59 become your Archive.
+            </p>
+            <div className="life-callout">
+              <span>30</span>
+              <div>
+                STARTING LIFE<small>Continue normal Commander setup.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-dark section-pad">
+        <div className="shell">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">02 / THE TWIST</p>
+              <h2>
+                A LITTLE UNKNOWN.
+                <br />A LOT TO PLAY FOR.
+              </h2>
+            </div>
+            <p>
+              Your Archive stays face down, separate from your Library. Two
+              simple rules let you tap into what’s waiting there.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="mechanic-card">
+              <CardHeader>
+                <span className="mechanic-number">01</span>
+                <CardTitle>Failed Search</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Whenever you search your Library and find{" "}
+                  <strong>zero cards</strong>, put the top card of your Archive
+                  into your hand.
+                </p>
+                <div className="mechanic-flow">
+                  <span>SEARCH FINDS ZERO</span>
+                  <ArrowRight />
+                  <span>ARCHIVE → HAND</span>
+                </div>
+                <p className="text-sm text-white/50">
+                  Finding one or more cards doesn’t count. Normal Magic rules
+                  determine whether you may find zero.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="mechanic-card">
+              <CardHeader>
+                <span className="mechanic-number">02</span>
+                <CardTitle>Archive Exchange</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Once during each of your turns, <strong>as a sorcery</strong>,
+                  you may put a card from your hand on the bottom of your
+                  Archive. If you do, take its top card into your hand.
+                </p>
+                <div className="mechanic-flow">
+                  <span>HAND → BOTTOM</span>
+                  <Repeat2 />
+                  <span>TOP → HAND</span>
+                </div>
+                <p className="text-sm text-white/50">
+                  One card in. One card out. Exchange doesn’t discard or exile.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-10 flex flex-col justify-between gap-5 border-t border-white/15 pt-7 md:flex-row">
+            <p className="text-sm text-white/60">
+              Everything else follows normal Commander rules. Your Archive is
+              not a backup Library.
+            </p>
+            <Link href="/rules" className="text-link shrink-0">
+              Explore the complete rules <ArrowUpRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="section-paper section-pad">
+        <div className="shell">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">03 / BRING IT TO THE TABLE</p>
+              <h2>
+                LESS PREP.
+                <br />
+                MORE PLAY.
+              </h2>
+            </div>
+            <p>
+              A quick reference for your next game. The details when you need
+              them. Everything to get your table started.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {[
+              {
+                icon: BookOpen,
+                title: "The complete rules",
+                text: "Every Alpha rule, in one place. Get your whole table on the same page.",
+                href: "/rules",
+                cta: "Read the rules",
+                tag: "THE SOURCE OF TRUTH",
+              },
+              {
+                icon: Download,
+                title: "Your table companion",
+                text: "Keep setup and both mechanics close at hand with a printable reference card.",
+                href: "/reference",
+                cta: "Get the reference",
+                tag: "READY FOR GAME NIGHT",
+              },
+              {
+                icon: MessageSquare,
+                title: "Questions? Covered.",
+                text: "From Failed Search to an empty Library. Clear answers before you shuffle up.",
+                href: "/faq",
+                cta: "Explore the FAQ",
+                tag: "A LITTLE CLARITY",
+              },
+            ].map(({ icon: Icon, ...item }) => (
+              <Card key={item.href} className="resource-card">
+                <CardHeader>
+                  <div className="resource-icon">
+                    <Icon strokeWidth={1.5} />
+                  </div>
+                  <p className="eyebrow text-[10px]">{item.tag}</p>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-1 flex-col">
+                  <p className="mb-8 text-sm leading-7 text-muted-foreground">
+                    {item.text}
+                  </p>
+                  <Link href={item.href} className="text-link mt-auto">
+                    {item.cta}
+                    <ArrowUpRight />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="playtest-banner">
+        <div className="shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+          <div>
+            <p className="eyebrow">HELP WRITE THE NEXT CHAPTER</p>
+            <h2>
+              SHUFFLE UP. TRY IT.
+              <br />
+              TELL US WHAT HAPPENED.
+            </h2>
+            <p className="mt-4 max-w-xl">
+              Archive is in Alpha. Your games help shape where it goes next.
+            </p>
+          </div>
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#171918] text-white hover:bg-black"
+          >
+            <Link href="/feedback">
+              Share playtest feedback <ArrowUpRight />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </>
   );
 }

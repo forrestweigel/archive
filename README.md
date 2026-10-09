@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Archive
 
-## Getting Started
+The website for Archive Alpha, a Commander variant at playarchivemtg.com.
 
-First, run the development server:
+## Development
 
-```bash
+Use Node.js 24 and npm 11 (validated during setup).
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```sh
+npm run lint
+npm run build
+npm run start
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The build downloads Open Sans through `next/font/google`; allow HTTPS access to
+`fonts.googleapis.com` and `fonts.gstatic.com`. Gotham Narrow is supplied locally.
+No database or application credentials are required.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content and pages
 
-## Learn More
+- `/`: overview, setup, and core mechanics
+- `/rules`: renders the canonical `RULES.md` directly
+- `/faq`: Alpha rules questions
+- `/reference`: printable reference and downloadable text
+- `/feedback`: generates a local playtest report; no submission backend is connected
+- `/changelog`: public release information
 
-To learn more about Next.js, take a look at the following resources:
+Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
+rules or presentation. Keep homepage summaries and the FAQ consistent with
+`RULES.md`. The reference card also reads its rule sections from that file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The hero uses original CSS placeholders (`hero-art` in `app/page.tsx` and
+`app/globals.css`). Replace these with supplied artwork when it is available.
+The shared UI uses shadcn-style Radix primitives, configured in `components.json`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Validation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Lint and production build include TypeScript validation. Browser smoke checks
+covered all pages, FAQ expansion, mobile navigation, feedback downloads, and
+reference printing. All pages were checked for horizontal overflow at 390px;
+the reference prints as one A4 landscape page. The form explicitly downloads
+answers to the user's device rather than claiming to submit them.

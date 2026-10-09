@@ -1,0 +1,62 @@
+import type { Metadata } from "next";
+import Markdown from "react-markdown";
+import { PageIntro } from "@/components/page-intro";
+import { PrintButton } from "@/components/print-button";
+import { getRuleSection } from "@/lib/archive";
+import { Button } from "@/components/ui/button";
+export const metadata: Metadata = { title: "Reference card" };
+export default function Reference() {
+  return (
+    <>
+      <PageIntro
+        eyebrow="YOUR TABLE COMPANION"
+        title="Shuffle. Split. Play."
+        description="The essentials at a glance. Print both panels, save them as a PDF, or download a text copy for your next game."
+      />
+      <div className="shell section-pad print-area">
+        <div className="no-print mb-9 flex flex-wrap gap-3">
+          <PrintButton />
+          <Button asChild variant="outline">
+            <a
+              href="/reference/download"
+              download="archive-alpha-reference.txt"
+            >
+              Download text reference
+            </a>
+          </Button>
+        </div>
+        <div className="reference-grid grid gap-6 md:grid-cols-2">
+          <section className="reference-sheet">
+            <p className="eyebrow mb-5">QUICK REFERENCE / FRONT</p>
+            <h2>
+              ARCHIVE <span className="text-primary">ALPHA</span>
+            </h2>
+            <div className="reference-mini">99 → 40 LIBRARY + 59 ARCHIVE</div>
+            <div className="prose-rules">
+              <Markdown>{getRuleSection(2)}</Markdown>
+            </div>
+            <p className="mt-7 border-t border-border pt-5 text-sm font-bold">
+              All other Commander rules apply.
+            </p>
+          </section>
+          <section className="reference-sheet">
+            <p className="eyebrow mb-5">QUICK REFERENCE / BACK</p>
+            <h3>Failed Search</h3>
+            <div className="prose-rules">
+              <Markdown>{getRuleSection(3)}</Markdown>
+            </div>
+            <h3 className="mt-8 border-t border-border pt-6">
+              Archive Exchange
+            </h3>
+            <div className="prose-rules">
+              <Markdown>{getRuleSection(4)}</Markdown>
+            </div>
+            <p className="mt-8 text-xs text-muted-foreground">
+              Archive Alpha · playarchivemtg.com
+            </p>
+          </section>
+        </div>
+      </div>
+    </>
+  );
+}
