@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -17,8 +18,9 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell flex h-22 items-center justify-between gap-6">
-        <Link href="/" aria-label="Archive home" className="wordmark">
-          ARCHIVE<span className="wordmark-dot">.</span>
+        <Link href="/" aria-label="Archive home" className="flex shrink-0 items-center gap-3">
+          <Image src="/brand/icon.png" alt="" width={198} height={209} className="h-9 w-auto" />
+          <Image src="/brand/title.png" alt="Archive" width={1107} height={173} className="h-auto w-36 lg:w-44" priority />
         </Link>
         <nav
           aria-label="Main navigation"
@@ -53,9 +55,11 @@ export function SiteHeader() {
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60" />
-            <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-[min(90vw,360px)] bg-[#171918] p-8 text-white">
-              <Dialog.Title className="text-3xl">ARCHIVE</Dialog.Title>
-              <Dialog.Description className="mt-2 text-sm text-white/60">
+            <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-[min(90vw,360px)] bg-background p-8 text-foreground">
+              <Dialog.Title>
+                <Image src="/brand/title.png" alt="Archive" width={1107} height={173} className="h-auto w-40" />
+              </Dialog.Title>
+              <Dialog.Description className="mt-2 text-sm text-muted-foreground">
                 A new way to play your Commander deck.
               </Dialog.Description>
               <Dialog.Close asChild>

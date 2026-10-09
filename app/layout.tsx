@@ -25,7 +25,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Archive — Your deck. A different story.",
+    default: "Archive — SHUFFLE. SPLIT. PLAY.",
     template: "%s | Archive",
   },
   description:

@@ -34,8 +34,8 @@ Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
 rules or presentation. Keep homepage summaries and the FAQ consistent with
 `RULES.md`. The reference card also reads its rule sections from that file.
 
-The hero uses original CSS placeholders (`hero-art` in `app/page.tsx` and
-`app/globals.css`). Replace these with supplied artwork when it is available.
+The hero uses the supplied Archive symbol; navigation, footer, reference card,
+and favicon use the owner-supplied logo variants.
 The shared UI uses shadcn-style Radix primitives, configured in `components.json`.
 
 ## Validation
@@ -45,3 +45,7 @@ covered all pages, FAQ expansion, mobile navigation, feedback downloads, and
 reference printing. All pages were checked for horizontal overflow at 390px;
 the reference prints as one A4 landscape page. The form explicitly downloads
 answers to the user's device rather than claiming to submit them.
+
+## Brand
+
+See [the brand guide](docs/BRAND.md) for logo usage, colors, typography, and the permanent tagline **SHUFFLE. SPLIT. PLAY.** The owner-supplied logo variants are stored in `public/brand/`. Application colors are foreground `#000000`, background `#FFFFFF`, and primary `#C8371C`. It is the primary visual reference; the Magic website is a secondary reference for composition.

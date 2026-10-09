@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Markdown from "react-markdown";
 import { PageIntro } from "@/components/page-intro";
@@ -10,7 +11,7 @@ export default function Reference() {
     <>
       <PageIntro
         eyebrow="YOUR TABLE COMPANION"
-        title="Shuffle. Split. Play."
+        title="SHUFFLE. SPLIT. PLAY."
         description="The essentials at a glance. Print both panels, save them as a PDF, or download a text copy for your next game."
       />
       <div className="shell section-pad print-area">
@@ -28,9 +29,8 @@ export default function Reference() {
         <div className="reference-grid grid gap-6 md:grid-cols-2">
           <section className="reference-sheet">
             <p className="eyebrow mb-5">QUICK REFERENCE / FRONT</p>
-            <h2>
-              ARCHIVE <span className="text-primary">ALPHA</span>
-            </h2>
+            <Image src="/brand/title-with-tagline.png" alt="Archive — Shuffle. Split. Play." width={1107} height={242} className="h-auto w-full max-w-80" />
+            <p className="eyebrow mt-4 text-primary">ALPHA</p>
             <div className="reference-mini">99 → 40 LIBRARY + 59 ARCHIVE</div>
             <div className="prose-rules">
               <Markdown>{getRuleSection(2)}</Markdown>

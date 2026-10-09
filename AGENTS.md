@@ -8,6 +8,7 @@ This repository contains the official website for **Archive**, a Magic: The Gath
 - Current rules release: **Alpha**
 - Canonical rules source: `RULES.md`
 - Product/context source: `.agents/skills/archive-format/SKILL.md`
+- Brand source: `docs/BRAND.md` and the owner-supplied logo in `public/brand/full-no-background.png`
 
 ## Source of truth
 
@@ -33,14 +34,16 @@ Use **shadcn/ui components for the frontend**.
 
 ## Visual direction
 
-Use [the official Magic website](https://magic.wizards.com/en) as the visual reference for hierarchy, composition, and presentation. Adapt its confident, promotional game-site direction to Archive’s own identity.
+The owner-supplied Archive logo is the primary visual identity reference. Read `docs/BRAND.md` before changing branding or presentation. The logo combines a vermilion stacked geometric symbol, a black sculptural serif ARCHIVE wordmark, and the bold condensed tagline **SHUFFLE. SPLIT. PLAY.**.
 
-- A dark navigation bar with a prominent Archive wordmark and clear navigation
+Use [the official Magic website](https://magic.wizards.com/en) as a secondary reference for hierarchy, composition, and promotional presentation. Archive’s supplied logo and brand guidance take precedence.
+
+- A prominent supplied Archive logo and clear navigation; choose a background compatible with the available logo variant
 - Large, immersive hero sections with bold display headings, concise supporting copy, and prominent calls to action
 - Image-led composition where original or explicitly supplied assets are available
 - Contrasting dark and light sections that give onboarding, rules, and resources distinct visual emphasis
-- Warm orange/red interaction accents, strong filled buttons, and clear secondary actions
-- **Gotham Narrow** for all headings and display typography
+- Application foreground **#000000**, background **#FFFFFF**, and primary **#C8371C**, with neutral gray supporting surfaces, strong filled buttons, and clear secondary actions
+- **Gotham Narrow** for headings, display copy, and the tagline; preserve the supplied logo’s custom serif wordmark as artwork
 - **Open Sans** for body text and supporting interface copy
 - Load the supplied `app/fonts/GothamNarrow-Bold.woff2` (700) and `app/fonts/GothamNarrow-Black.woff2` (900) through `next/font/local`; use Black for primary display headings and Bold for other headings
 - Editorial grids and resource cards with strong headings and generous spacing
@@ -83,6 +86,8 @@ The initial site should support:
 Keep the initial information architecture small. Avoid adding community, account, social, deckbuilding, or content features unless requested.
 
 ## Content conventions
+
+The permanent brand tagline is **SHUFFLE. SPLIT. PLAY.** Preserve its uppercase lettering, word order, and periods. Use it in prominent brand placements; it complements the onboarding explanation and does not replace the setup rules.
 
 Use **Archive Alpha** or **Alpha** for the current release. Do not label the current format `v0.2`.
 

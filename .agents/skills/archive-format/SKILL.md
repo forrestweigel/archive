@@ -110,7 +110,15 @@ Domain: **playarchivemtg.com**
 
 ### Design reference
 
-Use [the official Magic website](https://magic.wizards.com/en) as the guide for visual hierarchy, composition, and presentation. Translate its confident, promotional game-site feel into original Archive branding.
+The owner-supplied logo in `public/brand/full-no-background.png` and `docs/BRAND.md` define Archive’s primary visual identity. The supplied lockup combines a vermilion stacked geometric symbol, a black sculptural serif ARCHIVE wordmark, and **SHUFFLE. SPLIT. PLAY.** above the wordmark.
+
+Use [the official Magic website](https://magic.wizards.com/en) as a secondary guide for visual hierarchy, composition, and promotional presentation. Archive’s supplied branding takes precedence.
+
+### Logo and tagline
+
+Use the supplied logo artwork rather than recreating the symbol or typesetting the wordmark. Preserve its proportions, colors, internal spacing, and tagline placement. The supplied variants are `full-no-background.png`, `icon.png`, `title-with-tagline.png`, and `title.png` in `public/brand/`. Use the full lockup for spacious brand placements, the symbol for icons and favicons, the title with tagline for reference materials, and the title alone for navigation. Black wordmarks need light surfaces. Preserve the supplied artwork; additional variants should come from the project owner.
+
+The permanent brand tagline is **SHUFFLE. SPLIT. PLAY.** Keep the uppercase lettering, word order, and periods. Use Gotham Narrow when the tagline appears as separate text. Give it a prominent homepage or brand placement without repeating it next to a lockup that already includes it. Keep the plain-language onboarding explanation and setup diagram alongside the brand message.
 
 The website should feel:
 
@@ -124,12 +132,12 @@ The website should feel:
 
 Use:
 
-- A dark navigation bar with a prominent Archive wordmark
+- The supplied Archive logo in a prominent placement on a compatible background
 - Large hero sections with bold display headings, short supporting copy, and strong calls to action
 - Original or explicitly supplied imagery that supports the format’s presentation
 - Contrasting dark and light content sections
-- Warm orange/red accents and prominent filled action buttons
-- **Gotham Narrow** for all headings and display typography
+- Application foreground **#000000**, background **#FFFFFF**, and primary **#C8371C**, with neutral gray supporting surfaces and prominent filled action buttons
+- **Gotham Narrow** for headings, display copy, and the tagline; preserve the supplied logo’s custom serif wordmark as artwork
 - **Open Sans** for body text and supporting interface copy
 - Load the supplied `app/fonts/GothamNarrow-Bold.woff2` (700) and `app/fonts/GothamNarrow-Black.woff2` (900) through `next/font/local`; use Black for primary display headings and Bold for other headings
 - Editorial resource grids, clear card headings, and generous spacing
@@ -223,7 +231,7 @@ The reference card should contain only information needed at the table.
 
 Front:
 
-- ARCHIVE
+- Supplied Archive logo, with **SHUFFLE. SPLIT. PLAY.** readable when space allows
 - Alpha designation
 - Setup in plain text
 - Strong visual: `99 → 40 Library + 59 Archive`

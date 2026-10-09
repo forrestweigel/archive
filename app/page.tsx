@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -17,22 +18,17 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-art" aria-hidden="true">
-          <div className="art-orbit orbit-one" />
-          <div className="art-orbit orbit-two" />
-          <div className="art-slab slab-one" />
-          <div className="art-slab slab-two" />
-          <div className="art-slab slab-three" />
-          <div className="art-horizon" />
+          <Image src="/brand/icon.png" alt="" width={198} height={209} className="hero-symbol" />
         </div>
         <div className="shell hero-content">
           <p className="eyebrow">
             <span className="status-dot" /> A NEW WAY TO PLAY COMMANDER
           </p>
           <h1>
-            YOUR DECK.
-            <br />A DIFFERENT
+            SHUFFLE.
+            <br />SPLIT.
             <br />
-            <span>STORY.</span>
+            <span>PLAY.</span>
           </h1>
           <p className="hero-description">
             Meet Archive. The Commander variant that turns the deck you know
@@ -51,7 +47,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white/40 text-white"
+              className="border-foreground/40 text-foreground"
             >
               <Link href="/rules">Read the rules</Link>
             </Button>
@@ -261,7 +257,7 @@ export default function Home() {
           <Button
             asChild
             size="lg"
-            className="bg-[#171918] text-white hover:bg-black"
+            className="bg-black text-white hover:bg-black"
           >
             <Link href="/feedback">
               Share playtest feedback <ArrowUpRight />
