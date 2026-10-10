@@ -11,7 +11,7 @@ import { MechanicDiagram } from "@/components/mechanic-diagram";
 import goblet from "@/app/artwork/goblet.jpg";
 export const metadata = createPageMetadata({
   title: "Reference card",
-  description: "Keep Archive Alpha at the table: a visual guide to setup, 30 starting life, Failed Search, and Archive Exchange. Print or save as PDF.",
+  description: "Keep Archive Alpha at the table: a visual guide to setup, 30 starting life, Failed Search, and Exchange. Print or save as PDF.",
   path: "/reference",
 });
 export default function Reference() {
@@ -66,7 +66,7 @@ export default function Reference() {
               <Markdown>{getRuleSection(3)}</Markdown>
             </div>
             <h3 className="reference-exchange-heading">
-              Archive Exchange
+              Exchange
             </h3>
             <MechanicDiagram type="exchange" />
             <div className="prose-rules">

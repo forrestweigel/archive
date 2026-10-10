@@ -46,7 +46,7 @@ test("sends the complete report only to the configured recipient, with stable re
   assert.deepEqual(email.to, ["eldrxofficial@gmail.com"]);
   assert.match(email.text, /Players: 4/);
   assert.match(email.text, /Game duration \(minutes\): 60/);
-  assert.match(email.text, /Archive Exchanges: Often/);
+  assert.match(email.text, /Exchanges: Often/);
   assert.match(email.text, /Failed Search: Once/);
   assert.match(email.text, /Game ending: Combat/);
   assert.match(email.text, /Good game/);

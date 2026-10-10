@@ -104,7 +104,7 @@ Capitalize defined format terms consistently:
 - Archive
 - Library
 - Failed Search
-- Archive Exchange
+- Exchange
 
 Use concise explanations. The homepage should teach the format quickly; `RULES.md` should drive the detailed rules page and FAQ.
 

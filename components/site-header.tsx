@@ -53,9 +53,9 @@ export function SiteHeader() {
             </Button>
           </Dialog.Trigger>
           <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60" />
-            <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-[min(90vw,360px)] bg-background p-8 text-foreground">
-              <Dialog.Title>
+            <Dialog.Overlay className="mobile-nav-overlay fixed inset-0 z-50 bg-black/60" />
+            <Dialog.Content className="mobile-nav-panel fixed inset-y-0 right-0 z-50 w-[min(90vw,360px)] overflow-y-auto bg-background p-8 text-foreground shadow-xl">
+              <Dialog.Title className="sr-only">
                 Archive navigation
               </Dialog.Title>
               <Dialog.Description className="sr-only">

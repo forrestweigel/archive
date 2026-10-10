@@ -47,7 +47,7 @@ export function FeedbackForm() {
     const labels: Record<string, string> = {
       players: "Players",
       duration: "Game duration (minutes)",
-      exchanges: "Archive Exchanges",
+      exchanges: "Exchanges",
       search: "Failed Search",
       ending: "Game ending",
       notes: "Enjoyment, rules questions, and other feedback",
@@ -117,7 +117,7 @@ export function FeedbackForm() {
         </div>
         <div>
           <label htmlFor="exchanges" className="form-label">
-            How often did players use Archive Exchange?
+            How often did players use Exchange?
           </label>
           <Input
             id="exchanges"

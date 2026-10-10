@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import spirit from "@/app/artwork/spirit.jpg";
 export const metadata = createPageMetadata({
   title: "Complete rules",
-  description: "Read the complete Archive Alpha rules: deck setup, Failed Search, Archive Exchange, and how normal Commander rules apply.",
+  description: "Read the complete Archive Alpha rules: deck setup, Failed Search, Exchange, and how normal Commander rules apply.",
   path: "/rules",
 });
 export default function Rules() {

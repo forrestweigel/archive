@@ -114,7 +114,7 @@ export default function Home() {
             </Card>
             <Card className="mechanic-card">
               <CardHeader>
-                <CardTitle>Archive Exchange</CardTitle>
+                <CardTitle>Exchange</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>

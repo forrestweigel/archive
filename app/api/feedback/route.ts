@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 const fields = [
   ["players", "Players", 2],
   ["duration", "Game duration (minutes)", 5],
-  ["exchanges", "Archive Exchanges", 500],
+  ["exchanges", "Exchanges", 500],
   ["search", "Failed Search", 3000],
   ["ending", "Game ending", 1000],
   ["notes", "Enjoyment, rules questions, and other feedback", 5000],

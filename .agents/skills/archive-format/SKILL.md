@@ -47,7 +47,7 @@ When a Library search finds zero cards, the player puts the top card of their Ar
 
 This gives unsuccessful searches a format-specific fallback without allowing players to look through or select cards from the Archive.
 
-### Archive Exchange
+### Exchange
 
 Once during each of their turns, as a sorcery, a player may put a card from their hand on the bottom of their Archive. If they do, they put the top card of their Archive into their hand.
 
@@ -57,7 +57,7 @@ Conceptually:
 
 `top of ARCHIVE → HAND`
 
-Archive Exchange is a one-for-one exchange. It keeps the Archive central to gameplay while preserving its unknown top card.
+Exchange is a one-for-one exchange. It keeps the Archive central to gameplay while preserving its unknown top card.
 
 ## Design principles
 
@@ -96,7 +96,7 @@ The 40-card Library created from the shuffled 99 during Archive setup.
 **Failed Search**  
 The Archive rule that applies when a Library search finds zero cards.
 
-**Archive Exchange**  
+**Exchange**  
 The once-per-turn sorcery-speed format action that puts a card from hand on the bottom of the Archive and moves the top Archive card into hand.
 
 **Alpha**  
@@ -180,7 +180,7 @@ A first-time visitor should understand Archive in this order:
 3. **Shuffle the 99 and split it into a 40-card Library and 59-card Archive.**
 4. **Start at 30 life.**
 5. **Learn Failed Search.**
-6. **Learn Archive Exchange.**
+6. **Learn Exchange.**
 7. **Everything else follows normal Commander rules.**
 
 The visual centerpiece should be the setup transformation:
@@ -213,7 +213,7 @@ Collect structured feedback useful for Alpha development. Useful fields may incl
 
 - Player count
 - Approximate game duration
-- Number or frequency of Archive Exchanges
+- Number or frequency of Exchanges
 - Whether Failed Search occurred and mattered
 - How the game ended
 - Whether the smaller Library materially affected the game
@@ -244,7 +244,7 @@ Front:
 Back:
 
 - Failed Search
-- Archive Exchange
+- Exchange
 
 Use large readable typography and simple visual sequences. Avoid excessive numbered steps, repeated reminders, or explanations of ordinary Commander rules.
 

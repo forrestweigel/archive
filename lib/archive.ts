@@ -34,7 +34,7 @@ export const faqs = [
     "A Library search that finds zero cards. Finding one or more cards is not a Failed Search, even if the effect allowed you to find more. Normal Magic rules determine whether you may find zero cards.",
   ],
   [
-    "When can I use Archive Exchange?",
+    "When can I use Exchange?",
     "Once during each of your turns, as a sorcery. Put a card from your hand on the bottom of your Archive; if you do, put the top card of your Archive into your hand. This does not discard or exile the card.",
   ],
   [

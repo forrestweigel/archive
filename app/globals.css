@@ -76,6 +76,36 @@ a:focus-visible {
   color: var(--foreground);
   border-bottom: 1px solid var(--border);
 }
+@keyframes mobile-nav-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes mobile-nav-slide-out {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+@keyframes mobile-nav-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes mobile-nav-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-nav-panel[data-state="open"] {
+    animation: mobile-nav-slide-in 250ms ease-out;
+  }
+  .mobile-nav-panel[data-state="closed"] {
+    animation: mobile-nav-slide-out 200ms ease-in;
+  }
+  .mobile-nav-overlay[data-state="open"] {
+    animation: mobile-nav-fade-in 250ms ease-out;
+  }
+  .mobile-nav-overlay[data-state="closed"] {
+    animation: mobile-nav-fade-out 200ms ease-in;
+  }
+}
 .nav-link {
   font-size: 12px;
   font-weight: 600;
