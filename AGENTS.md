@@ -56,6 +56,17 @@ Use the reference for design direction, not as a template to copy. Preserve orig
 
 ## Product priorities
 
+Archive has six design goals:
+
+1. Increase variety between games.
+2. Weaken decks that rely on a single plan.
+3. Speed up games.
+4. Normalize power levels between decks.
+5. Help players overcome both mana flood and mana starvation.
+6. Require no rebuilding: use existing legal Commander decks and just play.
+
+Describe these as design goals, not proven playtest outcomes. No rebuilding is a goal in its own right. Explain the Commander problems behind the format; improvisation is part of the intended experience, not its whole purpose. Keep hero and FAQ copy comparable in length to the surrounding content.
+
 The site should help a Commander player answer these questions quickly:
 
 1. What is Archive?
@@ -77,9 +88,9 @@ The defining setup visual is:
 The initial site should support:
 
 - Homepage / How to Play
-- Complete Rules
+- Rules & Reference (complete rules and printable reference card on `/rules`)
+- About Archive (six design goals on `/about`, linked from the hero and FAQ; explain the goals and problems they address, not the rules or mechanics used to achieve them)
 - FAQ
-- Downloadable Reference Card
 - Playtest Feedback
 - Changelog / release information
 

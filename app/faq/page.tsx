@@ -26,10 +26,17 @@ export default function FAQ() {
       <div className="shell section-pad">
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible>
-            {faqs.map(([q, a], i) => (
+            {faqs.map(([q, a, href], i) => (
               <AccordionItem key={q} value={`faq-${i}`}>
                 <AccordionTrigger>{q}</AccordionTrigger>
-                <AccordionContent>{a}</AccordionContent>
+                <AccordionContent>
+                  <p>{a}</p>
+                  {href && (
+                    <Link href={href} className="mt-3 inline-block underline underline-offset-4">
+                      Learn more
+                    </Link>
+                  )}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

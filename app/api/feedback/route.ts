@@ -72,7 +72,7 @@ export async function POST(request: Request) {
   const from = process.env.FEEDBACK_FROM_EMAIL;
   const to = process.env.FEEDBACK_TO_EMAIL || "eldrxofficial@gmail.com";
   if (!apiKey || !from) {
-    return error("Feedback delivery is not available yet. Please download your report and try again later.", 503);
+    return error("Feedback delivery is not available yet. Your answers are still here; please try again later.", 503);
   }
   const text = [
     "ARCHIVE ALPHA — PLAYTEST REPORT",
@@ -93,12 +93,12 @@ export async function POST(request: Request) {
     });
     if (!response.ok) {
       console.error("Feedback email service returned status", response.status);
-      return error("We could not send your feedback. Your answers are still here; please try again or download your report.", 502);
+      return error("We could not send your feedback. Your answers are still here; please try again.", 502);
     }
     const result = await response.json();
     if (typeof result?.id !== "string" || !result.id) throw new Error("Missing email ID");
     return Response.json({ ok: true });
   } catch {
-    return error("We could not confirm your submission. Your answers are still here; please try again or download your report.", 502);
+    return error("We could not confirm your submission. Your answers are still here; please try again.", 502);
   }
 }

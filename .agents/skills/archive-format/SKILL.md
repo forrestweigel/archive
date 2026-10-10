@@ -13,7 +13,7 @@ For exact gameplay rules, always read the repository-root `RULES.md`. `RULES.md`
 
 ## What Archive is
 
-**Archive** is a Magic: The Gathering Commander variant designed around one constraint: players should be able to bring an existing legal Commander deck and play without rebuilding it.
+**Archive** is a Magic: The Gathering Commander variant with six design goals, including letting players bring an existing legal Commander deck and play without rebuilding it.
 
 A normal Commander deck is transformed at game setup:
 
@@ -27,15 +27,20 @@ The random 40-card Library means the same Commander deck can produce substantial
 
 ## Core experience
 
-Archive is intended to:
+Archive has six design goals:
 
-- Let players use Commander decks they already own.
-- Reduce deterministic access to a deck's full 99.
-- Reduce the consistency of tutors, linear packages, and exact-card plans.
-- Reward redundancy, flexible cards, improvisation, and adapting to what is available.
-- Produce somewhat faster games through a smaller Library and 30 starting life.
-- Make overlooked cards in existing Commander decks matter more often.
-- Add variance without requiring drafting, rebuilding, or maintaining a separate deck.
+1. Increase variety between games.
+2. Weaken decks that rely on a single plan.
+3. Speed up games.
+4. Normalize power levels between decks.
+5. Help players overcome both mana flood and mana starvation.
+6. Require no rebuilding: use existing legal Commander decks and just play.
+
+These address repetitive play, reliance on exact-card plans, long games, power gaps, mana problems, and the burden of rebuilding. No rebuilding is a goal in its own right, not merely a constraint.
+
+The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Failed Search provides a fallback for unsuccessful searches.
+
+Keep design intentions separate from demonstrated outcomes. Alpha playtesting explores whether and how consistently these goals are achieved; do not promise equal power, shorter games, or freedom from mana problems. Improvisation and adapting to available cards support the goals, but should not replace the explanation of why Archive exists.
 
 The format should remain easy to explain and physically easy to play.
 
@@ -177,11 +182,12 @@ A first-time visitor should understand Archive in this order:
 
 1. **Archive is a Commander variant.**
 2. **Use the Commander deck you already have.**
-3. **Shuffle the 99 and split it into a 40-card Library and 59-card Archive.**
-4. **Start at 30 life.**
-5. **Learn Failed Search.**
-6. **Learn Exchange.**
-7. **Everything else follows normal Commander rules.**
+3. **Understand why Archive exists: its six design goals.**
+4. **Shuffle the 99 and split it into a 40-card Library and 59-card Archive.**
+5. **Start at 30 life.**
+6. **Learn Failed Search.**
+7. **Learn Exchange.**
+8. **Everything else follows normal Commander rules.**
 
 The visual centerpiece should be the setup transformation:
 
@@ -193,19 +199,19 @@ Do not bury this below extensive explanation.
 
 ### Home / How to Play
 
-Fast onboarding with the premise, setup diagram, starting life, and the two Archive mechanics.
+Fast onboarding with a brief statement of purpose, setup diagram, starting life, and the two Archive mechanics. Keep the hero paragraph close to its existing length; use the setup section for the numbers rather than repeating them in the hero.
 
-### Rules
+### Rules & Reference
 
-A polished rendering of the canonical `RULES.md`.
+A polished rendering of the canonical `RULES.md` and the printable reference card on `/rules`. The card section uses the `#reference-card` anchor; `/reference` redirects there. Printing this page should print only the reference card.
+
+### About Archive
+
+Explain the six design goals on `/about`, with a short explanation of each problem and the intended player experience. Keep this page focused on the goals themselves; do not explain the rules or mechanics used to pursue them. Link here from the homepage hero and the FAQ. Keep design intentions separate from playtest evidence.
 
 ### FAQ
 
-Answer actual questions that arise from the Alpha rules and playtesting. Do not manufacture rules answers when `RULES.md` does not resolve the issue.
-
-### Reference Card
-
-Provide the printable/downloadable Archive reference card and, where useful, a screen-friendly version.
+Include a concise “Why was Archive created?” answer covering all six goals, comparable in length to other FAQ answers. Answer actual questions that arise from the Alpha rules and playtesting. Do not manufacture rules answers when `RULES.md` does not resolve the issue.
 
 ### Playtest Feedback
 

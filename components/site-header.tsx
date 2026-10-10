@@ -8,9 +8,9 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const links = [
   ["How to play", "/#how-to-play"],
-  ["Rules", "/rules"],
+  ["Rules & reference", "/rules"],
   ["FAQ", "/faq"],
-  ["Reference card", "/reference"],
+  ["About", "/about"],
 ];
 export function SiteHeader() {
   const pathname = usePathname();

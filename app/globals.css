@@ -585,17 +585,8 @@ h2 {
   font-size: 28px;
 }
 .reference-commander {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   font-size: 13px;
   line-height: 1.7;
-}
-.reference-commander svg {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  color: var(--primary);
 }
 .setup-diagram {
   display: block;
@@ -886,9 +877,6 @@ h2 {
   }
   .reference-sheet > img {
     max-width: 250px;
-  }
-  .reference-sheet > .eyebrow:first-child {
-    margin-bottom: 12px;
   }
   .reference-sheet .reference-setup-heading {
     margin-block: 16px 12px;

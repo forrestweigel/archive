@@ -36,9 +36,9 @@ export default function Home() {
             PLAY.
           </h1>
           <p className="hero-description">
-            Play with your existing legal Commander deck. Split the shuffled
-            99 into a 40-card Library and a 59-card Archive. Start at 30 life.
-            No rebuilding required.
+            Archive aims for more
+            varied games, faster finishes, and closer competition, with ways to
+            work through mana flood or starvation. All while using your existing Commander decks!
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -52,7 +52,7 @@ export default function Home() {
               size="lg"
               className="border-white/60 text-white hover:bg-white/10"
             >
-              <Link href="/rules">Read the rules</Link>
+              <Link href="/about">Why Archive?</Link>
             </Button>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading">
             <div>
-              <h2>RULES & REFERENCE</h2>
+              <h2>EXPLORE ARCHIVE</h2>
             </div>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -153,18 +153,18 @@ export default function Home() {
               {
                 artwork: spirit,
                 position: "center 42%",
-                title: "Complete rules",
-                text: "Setup, Archive mechanics, and how normal Commander rules apply.",
+                title: "Rules & reference",
+                text: "Read the complete rules and print a reference card for your table.",
                 href: "/rules",
                 cta: "Read the rules",
               },
               {
                 artwork: goblet,
                 position: "center 40%",
-                title: "Reference card",
-                text: "Print the setup and mechanics, save a PDF, or download a text copy.",
-                href: "/reference",
-                cta: "Get the reference card",
+                title: "About Archive",
+                text: "The six design goals behind Archive and the Commander problems they address.",
+                href: "/about",
+                cta: "Why Archive?",
               },
               {
                 artwork: animalBand,

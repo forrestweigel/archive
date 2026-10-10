@@ -1,14 +1,12 @@
 "use client";
 import { useRef, useState } from "react";
-import { Download, Check, Send } from "lucide-react";
+import { Check, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input, Textarea } from "@/components/ui/input";
 export function FeedbackForm() {
-  const [downloaded, setDownloaded] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
   const submissionId = useRef("");
-  const formRef = useRef<HTMLFormElement>(null);
   const sending = useRef(false);
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
@@ -35,46 +33,17 @@ export function FeedbackForm() {
       setStatus("error");
       setError(error instanceof Error && error.name === "Error"
         ? error.message
-        : "Could not confirm your submission. Your answers are still here; please try again or download your report.");
+        : "Could not confirm your submission. Your answers are still here; please try again.");
     } finally {
       sending.current = false;
     }
   }
 
-  function download() {
-    if (!formRef.current) return;
-    const data = new FormData(formRef.current);
-    const labels: Record<string, string> = {
-      players: "Players",
-      duration: "Game duration (minutes)",
-      exchanges: "Exchanges",
-      search: "Failed Search",
-      ending: "Game ending",
-      notes: "Enjoyment, rules questions, and other feedback",
-    };
-    const text = [
-      "ARCHIVE ALPHA — PLAYTEST REPORT",
-      ...Object.entries(labels).map(
-        ([key, label]) => `${label}: ${data.get(key) || "Not provided"}`,
-      ),
-    ].join("\n\n");
-    const url = URL.createObjectURL(
-      new Blob([text], { type: "text/plain;charset=utf-8" }),
-    );
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "archive-alpha-playtest.txt";
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    setDownloaded(true);
-  }
   return (
     <form
-      ref={formRef}
       onSubmit={submit}
       aria-busy={status === "sending"}
       onChange={() => {
-        setDownloaded(false);
         if (status !== "sending") setStatus("idle");
       }}
       className="space-y-7"
@@ -167,13 +136,9 @@ export function FeedbackForm() {
           {status === "sent" ? <Check /> : <Send />}
           {status === "sending" ? "Sending…" : status === "sent" ? "Feedback submitted" : "Submit feedback"}
         </Button>
-        <Button type="button" variant="outline" onClick={download} disabled={status === "sending"}>
-          <Download /> Download a copy
-        </Button>
       </div>
       <div role="status" aria-live="polite" className="text-sm">
         {status === "sent" && <p>Thank you! Your feedback has been submitted to Archive.</p>}
-        {downloaded && <p>Report download started.</p>}
       </div>
       {status === "error" && <p role="alert" className="text-sm text-destructive">{error}</p>}
     </form>
