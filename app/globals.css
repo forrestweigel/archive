@@ -167,7 +167,7 @@ a:focus-visible {
 }
 .hero-image {
   object-fit: cover;
-  object-position: 70% top;
+  object-position: 70% 65%;
 }
 .hero-art::after {
   content: "";
