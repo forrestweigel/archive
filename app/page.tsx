@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { DeckSplit } from "@/components/deck-split";
 import { MechanicDiagram } from "@/components/mechanic-diagram";
-import snake from "@/app/artwork/snake.jpg";
+import forest from "@/app/artwork/forest.jpg";
 import spirit from "@/app/artwork/spirit.jpg";
 import goblet from "@/app/artwork/goblet.jpg";
 import animalBand from "@/app/artwork/animal_band.jpg";
@@ -16,7 +16,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-art" aria-hidden="true">
           <Image
-            src={snake}
+            src={forest}
             alt=""
             fill
             preload
