@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { createPageMetadata } from "@/lib/metadata";
 import Markdown from "react-markdown";
-import { Crown, Heart } from "lucide-react";
+import { Crown } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { PrintButton } from "@/components/print-button";
 import { getRuleSection } from "@/lib/archive";
@@ -48,7 +48,7 @@ export default function Reference() {
             <SetupDiagram />
             <p className="reference-split-note">Split without looking at or choosing cards.</p>
             <div className="reference-life">
-              <div className="reference-life-total"><Heart aria-hidden="true" /><strong>30</strong></div>
+              <strong className="reference-life-total">30</strong>
               <div><h3>Starting life</h3><p>Continue normal Commander setup.</p></div>
             </div>
             <p className="reference-reminder">

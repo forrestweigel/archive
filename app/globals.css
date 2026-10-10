@@ -306,8 +306,7 @@ h2 {
   align-items: center;
   gap: 12px;
 }
-.movement-endpoint,
-.movement-action {
+.movement-endpoint {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,11 +323,16 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.movement-action > span {
+.movement-instruction {
+  grid-column: 1 / -1;
+  text-align: center;
   font-size: 13px;
   line-height: 1.5;
 }
-.movement-action > svg {
+.movement-arrow {
+  justify-self: center;
+  align-self: start;
+  margin-top: 4px;
   width: 32px;
   height: 32px;
   color: var(--primary);
@@ -371,7 +375,7 @@ h2 {
 }
 @media (max-width: 380px) {
   .card-movement {
-    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    grid-template-columns: 56px minmax(0, 1fr) 56px;
     gap: 8px;
   }
 }
@@ -592,23 +596,12 @@ h2 {
   border-block: 1px solid var(--border);
 }
 .reference-life-total {
-  position: relative;
   flex-shrink: 0;
-  width: 76px;
-  height: 72px;
   color: var(--primary);
-}
-.reference-life-total svg {
-  width: 100%;
-  height: 100%;
-  stroke-width: 1.3;
-}
-.reference-life-total strong {
-  position: absolute;
-  inset: 14px 0 0;
-  text-align: center;
   font-family: var(--font-gotham-narrow), Arial, sans-serif;
-  font-size: 32px;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
 }
 .reference-life h3 {
   font-size: 24px;
@@ -822,23 +815,32 @@ h2 {
     margin-block: 8px;
   }
   .reference-sheet .mechanic-diagram {
-    margin-block: 10px;
+    margin-block: 6px;
+  }
+  .reference-sheet .card-movement {
+    row-gap: 4px;
+  }
+  .reference-sheet .movement-endpoint {
+    gap: 4px;
+  }
+  .reference-sheet .movement-endpoint > span {
+    font-size: 10px;
   }
   .reference-sheet .movement-endpoint > svg {
     width: 28px;
     height: 28px;
   }
-  .reference-sheet .movement-action > svg {
+  .reference-sheet .movement-arrow {
     width: 24px;
     height: 24px;
   }
-  .reference-sheet .movement-action > span,
+  .reference-sheet .movement-instruction,
   .reference-sheet .search-trigger {
     font-size: 11px;
   }
   .reference-sheet .exchange-steps,
   .reference-sheet .search-steps {
-    gap: 10px;
+    gap: 6px;
   }
   .reference-sheet .setup-diagram {
     max-height: 150px;

@@ -13,14 +13,12 @@ function CardMovement({
 
   return (
     <div className="card-movement">
+      <span className="movement-instruction">{instruction}</span>
       <div className="movement-endpoint">
         <Source strokeWidth={1.5} aria-hidden="true" />
         <span>{fromHand ? "Hand" : "Archive"}</span>
       </div>
-      <div className="movement-action">
-        <span>{instruction}</span>
-        <ArrowRight strokeWidth={1.5} aria-hidden="true" />
-      </div>
+      <ArrowRight className="movement-arrow" strokeWidth={1.5} aria-hidden="true" />
       <div className="movement-endpoint">
         <Destination strokeWidth={1.5} aria-hidden="true" />
         <span>{fromHand ? "Archive" : "Hand"}</span>
