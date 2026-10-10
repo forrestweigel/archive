@@ -14,14 +14,16 @@ function CardMovement({
   return (
     <div className="card-movement">
       <span className="movement-instruction">{instruction}</span>
-      <div className="movement-endpoint">
-        <Source strokeWidth={1.5} aria-hidden="true" />
-        <span>{fromHand ? "Hand" : "Archive"}</span>
-      </div>
-      <ArrowRight className="movement-arrow" strokeWidth={1.5} aria-hidden="true" />
-      <div className="movement-endpoint">
-        <Destination strokeWidth={1.5} aria-hidden="true" />
-        <span>{fromHand ? "Archive" : "Hand"}</span>
+      <div className="movement-icons">
+        <div className="movement-endpoint">
+          <Source strokeWidth={1.5} aria-hidden="true" />
+          <span>{fromHand ? "Hand" : "Archive"}</span>
+        </div>
+        <ArrowRight className="movement-arrow" strokeWidth={1.5} aria-hidden="true" />
+        <div className="movement-endpoint">
+          <Destination strokeWidth={1.5} aria-hidden="true" />
+          <span>{fromHand ? "Archive" : "Hand"}</span>
+        </div>
       </div>
     </div>
   );
@@ -41,7 +43,7 @@ export function MechanicDiagram({ type }: { type: "search" | "exchange" }) {
             <SearchX strokeWidth={1.5} aria-hidden="true" />
             <span>Search finds <strong>zero cards</strong></span>
           </div>
-          <CardMovement from="archive" instruction="Take the top card" />
+          <CardMovement from="archive" instruction="Take the top card of your Archive and put it in your hand" />
         </div>
       )}
     </div>
