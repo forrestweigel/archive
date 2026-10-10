@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
 import { FeedbackForm } from "@/components/feedback-form";
+import troop from "@/app/artwork/troop.jpg";
 export const metadata: Metadata = { title: "Playtest notes" };
 export default function Feedback() {
   return (
     <>
       <PageIntro
+        artwork={troop}
         eyebrow="ARCHIVE ALPHA"
         title="Playtest notes"
         description="Record a game and download your notes. This form does not submit feedback."

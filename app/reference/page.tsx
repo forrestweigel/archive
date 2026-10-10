@@ -5,11 +5,13 @@ import { PageIntro } from "@/components/page-intro";
 import { PrintButton } from "@/components/print-button";
 import { getRuleSection } from "@/lib/archive";
 import { Button } from "@/components/ui/button";
+import island from "@/app/artwork/island.jpg";
 export const metadata: Metadata = { title: "Reference card" };
 export default function Reference() {
   return (
     <>
       <PageIntro
+        artwork={island}
         title="Reference card"
         description="Print both panels, save them as a PDF, or download a text copy."
       />

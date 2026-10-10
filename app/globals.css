@@ -90,8 +90,8 @@ a:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  color: var(--foreground);
-  background: var(--background);
+  color: #fff;
+  background: #171b17;
 }
 .hero-content {
   position: relative;
@@ -106,7 +106,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 .hero .eyebrow {
-  color: var(--foreground);
+  color: #fff;
 }
 .status-dot {
   display: inline-block;
@@ -123,15 +123,12 @@ a:focus-visible {
   line-height: 0.94;
   margin-top: 26px;
 }
-.hero h1 span {
-  color: #C8371C;
-}
 .hero-description {
   font-size: 17px;
   line-height: 1.8;
   max-width: 430px;
   margin-top: 25px;
-  color: var(--foreground);
+  color: #ededed;
 }
 .hero-art {
   position: absolute;
@@ -139,12 +136,15 @@ a:focus-visible {
   inset: 0;
   pointer-events: none;
 }
-.hero-symbol {
+.hero-landscape {
+  object-fit: cover;
+  object-position: 65% center;
+}
+.hero-art::after {
+  content: "";
   position: absolute;
-  width: min(34vw, 420px);
-  height: auto;
-  right: 8%;
-  top: 18%;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(10 16 12 / 94%) 0%, rgb(10 16 12 / 82%) 30%, rgb(10 16 12 / 20%) 65%, transparent 100%);
 }
 .section-pad {
   padding-block: 96px;
@@ -335,6 +335,7 @@ h2 {
   width: 16px;
 }
 .resource-card {
+  overflow: hidden;
   border-color: #d5d5d5;
   transition:
     transform 0.2s,
@@ -344,23 +345,42 @@ h2 {
   transform: translateY(-4px);
   border-color: #909090;
 }
-.resource-icon {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  color: var(--primary);
+.resource-art {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #252525;
 }
-.resource-icon svg {
-  width: 40px;
-  height: 40px;
+.resource-art img {
+  object-fit: cover;
 }
 .resource-card h3 {
   font-size: 28px;
 }
 .playtest-banner {
-  background: var(--primary);
-  padding-block: 64px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #171b17;
   color: #fff;
+}
+.playtest-art {
+  position: relative;
+  aspect-ratio: 2099 / 496;
+}
+.playtest-art img {
+  object-fit: cover;
+}
+.playtest-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 60%, #171b17);
+}
+.playtest-content {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 64px;
 }
 .playtest-banner h2 {
   font-size: 44px;
@@ -377,9 +397,27 @@ h2 {
   color: #C8371C;
 }
 .page-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: #252525;
   color: #f1f1f1;
   padding-block: 70px;
+}
+.page-intro-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+.page-intro-art img {
+  object-fit: cover;
+  object-position: center 48%;
+}
+.page-intro-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(15 19 16 / 94%), rgb(15 19 16 / 80%) 45%, rgb(15 19 16 / 20%));
 }
 .page-intro .eyebrow {
   color: #fff;
@@ -480,8 +518,8 @@ h2 {
   .deck-stack span {
     font-size: 80px;
   }
-  .hero-art {
-    opacity: 0.7;
+  .hero-art::after {
+    background: linear-gradient(90deg, rgb(10 16 12 / 94%), rgb(10 16 12 / 78%) 50%, rgb(10 16 12 / 20%));
   }
   .section-heading {
     gap: 30px;
@@ -501,8 +539,8 @@ h2 {
     padding-inline: 22px;
   }
   .hero-content {
-    padding-top: 52px;
-    padding-bottom: 64px;
+    padding-top: 12px;
+    padding-bottom: 52px;
   }
   .hero h1 {
     font-size: 69px;
@@ -510,10 +548,27 @@ h2 {
   }
   .hero-description {
     font-size: 15px;
-    max-width: 320px;
+    max-width: 430px;
   }
   .hero-art {
-    opacity: 0.45;
+    position: relative;
+    height: 260px;
+  }
+  .hero-art::after {
+    background: linear-gradient(transparent 55%, #171b17);
+  }
+  .hero-landscape {
+    object-position: center 45%;
+  }
+  .page-intro-art::after {
+    background: rgb(15 19 16 / 80%);
+  }
+  .playtest-art {
+    aspect-ratio: 2.5;
+  }
+  .playtest-content {
+    padding-top: 24px;
+    padding-bottom: 48px;
   }
   .section-heading {
     display: block;
@@ -528,7 +583,7 @@ h2 {
     padding-top: 20px;
   }
   .deck-stack {
-    width: 83px;
+    width: clamp(64px, 21vw, 83px);
     height: 120px;
     box-shadow:
       3px -3px 0 -1px #dedede,
@@ -546,7 +601,7 @@ h2 {
   }
   .deck-group > p {
     font-size: 8px;
-    max-width: 83px;
+    max-width: clamp(64px, 21vw, 83px);
   }
   .split-arrow,
   .split-plus {
@@ -630,16 +685,5 @@ h2 {
   @page {
     size: A4 landscape;
     margin: 14mm;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-symbol {
-    width: 230px;
-    right: -110px;
-    top: 20%;
-  }
-  .hero-art {
-    opacity: 0.12;
   }
 }

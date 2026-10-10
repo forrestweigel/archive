@@ -4,11 +4,13 @@ import Link from "next/link";
 import { getRules } from "@/lib/archive";
 import { PageIntro } from "@/components/page-intro";
 import { Button } from "@/components/ui/button";
+import plains from "@/app/artwork/plains.jpg";
 export const metadata: Metadata = { title: "Complete rules" };
 export default function Rules() {
   return (
     <>
       <PageIntro
+        artwork={plains}
         title="Complete rules"
         description="Unless these rules say otherwise, normal Commander rules apply."
       />

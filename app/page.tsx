@@ -1,22 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Download,
-  BookOpen,
-  MessageSquare,
-  Repeat2,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, Repeat2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { DeckSplit } from "@/components/deck-split";
+import forest from "@/app/artwork/forest.jpg";
+import plains from "@/app/artwork/plains.jpg";
+import island from "@/app/artwork/island.jpg";
+import mountain from "@/app/artwork/mountain.jpg";
+import troop from "@/app/artwork/troop.jpg";
 export default function Home() {
   return (
     <>
       <section className="hero">
         <div className="hero-art" aria-hidden="true">
-          <Image src="/brand/icon.png" alt="" width={198} height={209} className="hero-symbol" />
+          <Image
+            src={forest}
+            alt=""
+            fill
+            preload
+            sizes="100vw"
+            placeholder="blur"
+            className="hero-landscape"
+          />
         </div>
         <div className="shell hero-content">
           <p className="eyebrow">
@@ -26,7 +32,7 @@ export default function Home() {
             SHUFFLE.
             <br />SPLIT.
             <br />
-            <span>PLAY.</span>
+            PLAY.
           </h1>
           <p className="hero-description">
             Play with your existing legal Commander deck. Split the shuffled
@@ -43,7 +49,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-foreground/40 text-foreground"
+              className="border-white/60 text-white hover:bg-white/10"
             >
               <Link href="/rules">Read the rules</Link>
             </Button>
@@ -152,32 +158,38 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-3">
             {[
               {
-                icon: BookOpen,
+                artwork: plains,
                 title: "Complete rules",
                 text: "Setup, Archive mechanics, and how normal Commander rules apply.",
                 href: "/rules",
                 cta: "Read the rules",
               },
               {
-                icon: Download,
+                artwork: island,
                 title: "Reference card",
                 text: "Print the setup and mechanics, save a PDF, or download a text copy.",
                 href: "/reference",
                 cta: "Get the reference card",
               },
               {
-                icon: MessageSquare,
+                artwork: mountain,
                 title: "Frequently asked questions",
                 text: "Search restrictions, Exchange timing, and an empty Library.",
                 href: "/faq",
                 cta: "Read the FAQ",
               },
-            ].map(({ icon: Icon, ...item }) => (
+            ].map(({ artwork, ...item }) => (
               <Card key={item.href} className="resource-card">
+                <div className="resource-art" aria-hidden="true">
+                  <Image
+                    src={artwork}
+                    alt=""
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1280px) 33vw, 380px"
+                    placeholder="blur"
+                  />
+                </div>
                 <CardHeader>
-                  <div className="resource-icon">
-                    <Icon strokeWidth={1.5} />
-                  </div>
                   <CardTitle>{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-1 flex-col">
@@ -195,7 +207,10 @@ export default function Home() {
         </div>
       </section>
       <section className="playtest-banner">
-        <div className="shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div className="playtest-art" aria-hidden="true">
+          <Image src={troop} alt="" fill sizes="100vw" placeholder="blur" />
+        </div>
+        <div className="shell playtest-content flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
             <h2>PLAYTEST NOTES</h2>
             <p className="mt-4 max-w-xl">
@@ -203,11 +218,7 @@ export default function Home() {
               downloadable report.
             </p>
           </div>
-          <Button
-            asChild
-            size="lg"
-            className="bg-black text-white hover:bg-black"
-          >
+          <Button asChild size="lg">
             <Link href="/feedback">
               Record a playtest <ArrowUpRight />
             </Link>

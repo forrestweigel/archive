@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { faqs } from "@/lib/archive";
 import { PageIntro } from "@/components/page-intro";
+import mountain from "@/app/artwork/mountain.jpg";
 import {
   Accordion,
   AccordionItem,
@@ -13,6 +14,7 @@ export default function FAQ() {
   return (
     <>
       <PageIntro
+        artwork={mountain}
         title="Frequently asked questions"
         description="Deck setup, Archive access, and how Commander rules apply."
       />

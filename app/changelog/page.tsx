@@ -3,11 +3,13 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { PageIntro } from "@/components/page-intro";
 import { getChangelog } from "@/lib/archive";
+import theFey from "@/app/artwork/the_fey.jpg";
 export const metadata: Metadata = { title: "Changelog" };
 export default function Changelog() {
   return (
     <>
       <PageIntro
+        artwork={theFey}
         title="Changelog"
         description="Public rules releases and what changed."
       />
