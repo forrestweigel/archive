@@ -32,8 +32,8 @@ export function MechanicDiagram({ type }: { type: "search" | "exchange" }) {
     <div className="mechanic-diagram">
       {type === "exchange" ? (
         <ol className="exchange-steps" aria-label="Archive Exchange steps">
-          <li><CardMovement from="hand" instruction="1 · Put one card on the bottom" /></li>
-          <li><CardMovement from="archive" instruction="2 · If you do, take the top card" /></li>
+          <li><CardMovement from="hand" instruction="1 · Put a card from your hand on the bottom of your Archive" /></li>
+          <li><CardMovement from="archive" instruction="2 · If you do, put the top card of your Archive into your hand" /></li>
         </ol>
       ) : (
         <div className="search-steps">
