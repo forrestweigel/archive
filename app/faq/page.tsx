@@ -1,20 +1,25 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { faqs } from "@/lib/archive";
 import { PageIntro } from "@/components/page-intro";
-import mountain from "@/app/artwork/mountain.jpg";
+import animalBand from "@/app/artwork/animal_band.jpg";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-export const metadata: Metadata = { title: "Frequently asked questions" };
+export const metadata = createPageMetadata({
+  title: "Frequently asked questions",
+  description: "Answers to Archive Alpha questions about your existing Commander deck, the face-down Archive, search restrictions, and Exchange timing.",
+  path: "/faq",
+});
 export default function FAQ() {
   return (
     <>
       <PageIntro
-        artwork={mountain}
+        artwork={animalBand}
+        artworkPosition="center 60%"
         title="Frequently asked questions"
         description="Deck setup, Archive access, and how Commander rules apply."
       />

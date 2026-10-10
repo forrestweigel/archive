@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { PageIntro } from "@/components/page-intro";
 import { FeedbackForm } from "@/components/feedback-form";
 import troop from "@/app/artwork/troop.jpg";
-export const metadata: Metadata = { title: "Playtest notes" };
+export const metadata = createPageMetadata({
+  title: "Playtest notes",
+  description: "Record an Archive Alpha game and download your playtest notes, including game length, Archive use, and rules questions.",
+  path: "/feedback",
+});
 export default function Feedback() {
   return (
     <>

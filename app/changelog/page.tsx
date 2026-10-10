@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { PageIntro } from "@/components/page-intro";
 import { getChangelog } from "@/lib/archive";
 import theFey from "@/app/artwork/the_fey.jpg";
-export const metadata: Metadata = { title: "Changelog" };
+export const metadata = createPageMetadata({
+  title: "Changelog",
+  description: "See shipped Archive rules releases and what changed. Read the current Archive Alpha rules and release history.",
+  path: "/changelog",
+});
 export default function Changelog() {
   return (
     <>
@@ -18,7 +23,7 @@ export default function Changelog() {
           <Markdown components={{ h1: () => null }}>{getChangelog()}</Markdown>
         </article>
         <Link href="/rules" className="text-link mt-8 underline">
-          Read the current rules →
+          Read the current rules <ArrowRight aria-hidden="true" />
         </Link>
       </div>
     </>

@@ -1,16 +1,21 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Markdown from "react-markdown";
 import Link from "next/link";
 import { getRules } from "@/lib/archive";
 import { PageIntro } from "@/components/page-intro";
 import { Button } from "@/components/ui/button";
-import plains from "@/app/artwork/plains.jpg";
-export const metadata: Metadata = { title: "Complete rules" };
+import spirit from "@/app/artwork/spirit.jpg";
+export const metadata = createPageMetadata({
+  title: "Complete rules",
+  description: "Read the complete Archive Alpha rules: deck setup, Failed Search, Archive Exchange, and how normal Commander rules apply.",
+  path: "/rules",
+});
 export default function Rules() {
   return (
     <>
       <PageIntro
-        artwork={plains}
+        artwork={spirit}
+        artworkPosition="center 42%"
         title="Complete rules"
         description="Unless these rules say otherwise, normal Commander rules apply."
       />

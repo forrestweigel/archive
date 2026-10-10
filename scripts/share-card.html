@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Archive social preview artwork</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" />
+    <style>
+      @font-face {
+        font-family: Gotham;
+        src: url("../app/fonts/GothamNarrow-Black.woff2") format("woff2");
+        font-weight: 900;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; width: 1200px; height: 630px; background: white; color: #000; font-family: "Open Sans", sans-serif; }
+      main { display: flex; width: 100%; height: 100%; border-top: 12px solid #c8371c; }
+      .content { width: 780px; padding: 44px 48px; }
+      .logo { display: block; width: 624px; height: auto; }
+      h1 { font: 900 48px/1.1 Gotham, sans-serif; margin: 32px 0 12px; }
+      .description { font-size: 26px; line-height: 1.5; margin: 0; }
+      .stats { display: flex; gap: 42px; margin-top: 28px; padding-top: 22px; border-top: 1px solid #d5d5d5; }
+      .stat { display: flex; flex-direction: column; }
+      .stat strong { font: 900 64px/1 Gotham, sans-serif; }
+      .stat span { margin-top: 8px; font-size: 18px; font-weight: 600; }
+      footer { margin-top: 26px; font-size: 18px; font-weight: 600; color: #646464; }
+      .art { position: relative; width: 420px; overflow: hidden; background: #111923; }
+      .art img { width: 100%; height: 100%; object-fit: cover; object-position: 74% center; }
+      .art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 65%, #111923); }
+      .release { position: absolute; z-index: 1; bottom: 38px; left: 38px; color: #fff; font: 900 26px Gotham, sans-serif; letter-spacing: 2px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="content">
+        <img class="logo" src="../public/brand/full-no-background.png" alt="Archive — SHUFFLE. SPLIT. PLAY." />
+        <h1>A COMMANDER VARIANT.</h1>
+        <p class="description">Use your existing legal Commander deck.<br />No rebuilding required.</p>
+        <div class="stats">
+          <div class="stat"><strong>40</strong><span>Library cards</span></div>
+          <div class="stat"><strong>59</strong><span>Archive cards</span></div>
+          <div class="stat"><strong>30</strong><span>Starting life</span></div>
+        </div>
+        <footer>playarchivemtg.com</footer>
+      </section>
+      <div class="art">
+        <img src="../app/artwork/snake.jpg" alt="" />
+        <span class="release">ARCHIVE ALPHA</span>
+      </div>
+    </main>
+  </body>
+</html>

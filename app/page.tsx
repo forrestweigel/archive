@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, Repeat2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { DeckSplit } from "@/components/deck-split";
-import forest from "@/app/artwork/forest.jpg";
-import plains from "@/app/artwork/plains.jpg";
-import island from "@/app/artwork/island.jpg";
-import mountain from "@/app/artwork/mountain.jpg";
+import { MechanicDiagram } from "@/components/mechanic-diagram";
+import snake from "@/app/artwork/snake.jpg";
+import spirit from "@/app/artwork/spirit.jpg";
+import goblet from "@/app/artwork/goblet.jpg";
+import animalBand from "@/app/artwork/animal_band.jpg";
 import troop from "@/app/artwork/troop.jpg";
 export default function Home() {
   return (
@@ -15,13 +16,13 @@ export default function Home() {
       <section className="hero">
         <div className="hero-art" aria-hidden="true">
           <Image
-            src={forest}
+            src={snake}
             alt=""
             fill
             preload
             sizes="100vw"
             placeholder="blur"
-            className="hero-landscape"
+            className="hero-image"
           />
         </div>
         <div className="shell hero-content">
@@ -104,11 +105,7 @@ export default function Home() {
                   <strong>zero cards</strong>, put the top card of your Archive
                   into your hand.
                 </p>
-                <div className="mechanic-flow">
-                  <span>SEARCH FINDS ZERO</span>
-                  <ArrowRight />
-                  <span>ARCHIVE → HAND</span>
-                </div>
+                <MechanicDiagram type="search" />
                 <p className="text-sm text-white/50">
                   Finding one or more cards doesn’t count. Normal Magic rules
                   determine whether you may find zero.
@@ -126,11 +123,7 @@ export default function Home() {
                   Archive. If you do, put the top card of your Archive into
                   your hand.
                 </p>
-                <div className="mechanic-flow">
-                  <span>HAND → BOTTOM</span>
-                  <Repeat2 />
-                  <span>TOP → HAND</span>
-                </div>
+                <MechanicDiagram type="exchange" />
                 <p className="text-sm text-white/50">
                   Exchange doesn’t discard or exile the card.
                 </p>
@@ -158,50 +151,56 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-3">
             {[
               {
-                artwork: plains,
+                artwork: spirit,
+                position: "center 42%",
                 title: "Complete rules",
                 text: "Setup, Archive mechanics, and how normal Commander rules apply.",
                 href: "/rules",
                 cta: "Read the rules",
               },
               {
-                artwork: island,
+                artwork: goblet,
+                position: "center 40%",
                 title: "Reference card",
                 text: "Print the setup and mechanics, save a PDF, or download a text copy.",
                 href: "/reference",
                 cta: "Get the reference card",
               },
               {
-                artwork: mountain,
+                artwork: animalBand,
+                position: "center 60%",
                 title: "Frequently asked questions",
                 text: "Search restrictions, Exchange timing, and an empty Library.",
                 href: "/faq",
                 cta: "Read the FAQ",
               },
-            ].map(({ artwork, ...item }) => (
-              <Card key={item.href} className="resource-card">
-                <div className="resource-art" aria-hidden="true">
-                  <Image
-                    src={artwork}
-                    alt=""
-                    fill
-                    sizes="(max-width: 767px) 100vw, (max-width: 1280px) 33vw, 380px"
-                    placeholder="blur"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle>{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-1 flex-col">
-                  <p className="mb-8 text-sm leading-7 text-muted-foreground">
-                    {item.text}
-                  </p>
-                  <Link href={item.href} className="text-link mt-auto">
-                    {item.cta}
-                    <ArrowUpRight />
-                  </Link>
-                </CardContent>
-              </Card>
+            ].map(({ artwork, position, ...item }) => (
+              <Link key={item.href} href={item.href} className="resource-card-link" aria-label={item.cta}>
+                <Card className="resource-card h-full">
+                  <div className="resource-art" aria-hidden="true">
+                    <Image
+                      src={artwork}
+                      alt=""
+                      fill
+                      sizes="(max-width: 767px) 100vw, (max-width: 1280px) 33vw, 380px"
+                      placeholder="blur"
+                      style={{ objectPosition: position }}
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle>{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex flex-1 flex-col">
+                    <p className="mb-8 text-sm leading-7 text-muted-foreground">
+                      {item.text}
+                    </p>
+                    <span className="text-link mt-auto">
+                      {item.cta}
+                      <ArrowUpRight />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

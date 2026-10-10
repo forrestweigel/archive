@@ -34,8 +34,8 @@ Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
 rules or presentation. Keep homepage summaries and the FAQ consistent with
 `RULES.md`. The reference card also reads its rule sections from that file.
 
-The hero uses the supplied Archive symbol; navigation, footer, reference card,
-and favicon use the owner-supplied logo variants.
+The hero and resource cards use owner-supplied fantasy artwork; navigation,
+footer, reference card, and favicon use the supplied logo variants.
 The shared UI uses shadcn-style Radix primitives, configured in `components.json`.
 
 ## Publishing a rules release
@@ -61,6 +61,25 @@ When an owner-approved release (such as Beta) is ready:
 Repeat this process for subsequent releases. Log later rules clarifications as
 dated entries describing the clarification. Routine website styling and copy
 edits belong in Git history, not the public rules changelog.
+
+## Shared-link previews
+
+`lib/metadata.ts` defines shared Open Graph and Twitter card settings. Each page
+sets its own description, title, and canonical URL. The preview image is the
+1200 × 630 PNG at `public/brand/share-card.png`; its editable layout is
+`scripts/share-card.html`. Keep its setup numbers and release label in sync with
+`RULES.md` when publishing a rules release.
+
+To regenerate the image, open the HTML in Chromium at a 1200 × 630 viewport,
+wait for images and fonts to finish loading, and capture the viewport as a PNG.
+For example, with Playwright's Chromium installed:
+
+```sh
+npx --package=playwright playwright screenshot --browser=chromium --viewport-size="1200,630" --wait-for-timeout=2000 "file://$(pwd)/scripts/share-card.html" public/brand/share-card.png
+```
+
+Check the resulting image before committing it. Social platforms may cache a
+previous preview until they fetch the deployed URL again.
 
 ## Validation
 

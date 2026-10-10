@@ -136,9 +136,9 @@ a:focus-visible {
   inset: 0;
   pointer-events: none;
 }
-.hero-landscape {
+.hero-image {
   object-fit: cover;
-  object-position: 65% center;
+  object-position: 70% top;
 }
 .hero-art::after {
   content: "";
@@ -304,21 +304,38 @@ h2 {
 .mechanic-card strong {
   color: #fff;
 }
-.mechanic-flow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-block: 24px;
-  margin-block: 20px;
-  border-block: 1px solid #ffffff1a;
-  font-size: 10px;
-  letter-spacing: 0.09em;
-  color: #dddddd;
+/* Shared vector diagrams stay legible on dark cards and on paper. */
+.mechanic-diagram {
+  --diagram-surface: #fff;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block: 16px;
+  color: #222;
 }
-.mechanic-flow svg {
-  width: 20px;
-  color: #C8371C;
+.mechanic-card .mechanic-diagram {
+  --diagram-surface: #2b2b2b;
+  color: #eee;
+  padding-block: 12px;
+  border-block: 1px solid #ffffff26;
+}
+.mechanic-diagram text {
+  fill: currentColor;
+  font-family: var(--font-open-sans), Arial, sans-serif;
+  font-size: 16px;
+}
+.mechanic-diagram .diagram-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.mechanic-diagram .diagram-zero {
+  font-family: var(--font-gotham-narrow), Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+}
+.diagram-accent {
+  color: var(--primary);
 }
 .text-link {
   display: inline-flex;
@@ -341,13 +358,18 @@ h2 {
     transform 0.2s,
     border-color 0.2s;
 }
-.resource-card:hover {
+.resource-card:hover,
+.resource-card-link:focus-visible .resource-card {
   transform: translateY(-4px);
   border-color: #909090;
 }
+.resource-card-link {
+  display: block;
+  min-width: 0;
+}
 .resource-art {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #252525;
 }
@@ -407,7 +429,7 @@ h2 {
 .page-intro-art {
   position: absolute;
   z-index: -1;
-  inset: 0;
+  inset: 0 0 0 35%;
 }
 .page-intro-art img {
   object-fit: cover;
@@ -417,7 +439,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgb(15 19 16 / 94%), rgb(15 19 16 / 80%) 45%, rgb(15 19 16 / 20%));
+  background: linear-gradient(90deg, #252525, rgb(37 37 37 / 72%) 35%, rgb(37 37 37 / 12%));
 }
 .page-intro .eyebrow {
   color: #fff;
@@ -478,13 +500,97 @@ h2 {
 .reference-sheet .prose-rules p {
   margin-block: 12px;
 }
-.reference-mini {
-  font-family: var(--font-gotham-narrow);
-  font-size: 38px;
+.reference-sheet .reference-setup-heading {
+  margin-block: 24px 18px;
+  font-size: 28px;
+}
+.reference-commander {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.reference-commander svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+.setup-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+  color: #222;
+}
+.setup-diagram text {
+  fill: currentColor;
+  font-family: var(--font-open-sans), Arial, sans-serif;
+}
+.setup-diagram .setup-count {
+  font-family: var(--font-gotham-narrow), Arial, sans-serif;
+  font-size: 58px;
   font-weight: 900;
-  padding-block: 25px;
+}
+.setup-label {
+  font-size: 13px;
+  font-weight: 700;
+}
+.setup-caption-text {
+  font-size: 12px;
+}
+.reference-split-note {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.reference-life {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: 20px;
+  margin-block: 22px;
   border-block: 1px solid var(--border);
-  margin-block: 25px;
+}
+.reference-life-total {
+  position: relative;
+  flex-shrink: 0;
+  width: 76px;
+  height: 72px;
+  color: var(--primary);
+}
+.reference-life-total svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.3;
+}
+.reference-life-total strong {
+  position: absolute;
+  inset: 14px 0 0;
+  text-align: center;
+  font-family: var(--font-gotham-narrow), Arial, sans-serif;
+  font-size: 32px;
+}
+.reference-life h3 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.reference-life p,
+.reference-reminder {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.reference-exchange-heading {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 22px;
+}
+.reference-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #555;
 }
 .form-label {
   display: block;
@@ -557,8 +663,11 @@ h2 {
   .hero-art::after {
     background: linear-gradient(transparent 55%, #171b17);
   }
-  .hero-landscape {
+  .hero-image {
     object-position: center 45%;
+  }
+  .page-intro-art {
+    inset: 0;
   }
   .page-intro-art::after {
     background: rgb(15 19 16 / 80%);
@@ -627,9 +736,6 @@ h2 {
   .reference-sheet {
     padding: 24px;
   }
-  .mechanic-flow {
-    font-size: 9px;
-  }
   .hero .eyebrow {
     font-size: 9px;
   }
@@ -663,7 +769,7 @@ h2 {
   .reference-sheet {
     break-inside: avoid;
     box-shadow: none;
-    padding: 22px;
+    padding: 18px;
   }
   .reference-grid {
     display: grid !important;
@@ -671,16 +777,46 @@ h2 {
     gap: 16px !important;
   }
   .reference-sheet .prose-rules {
-    font-size: 10pt;
+    font-size: 9pt;
+    line-height: 1.55;
+  }
+  .reference-sheet .prose-rules p {
+    margin-block: 8px;
+  }
+  .reference-sheet .mechanic-diagram {
+    max-height: 112px;
+    margin-block: 10px;
+  }
+  .reference-sheet .setup-diagram {
+    max-height: 150px;
+    margin-top: 16px;
+  }
+  .reference-sheet > img {
+    max-width: 250px;
+  }
+  .reference-sheet > .eyebrow:first-child {
+    margin-bottom: 12px;
+  }
+  .reference-sheet .reference-setup-heading {
+    margin-block: 16px 12px;
+  }
+  .reference-life {
+    margin-block: 16px;
+    padding-block: 12px;
+  }
+  .reference-footer {
+    margin-top: 16px;
+  }
+  .reference-exchange-heading {
+    margin-top: 16px;
+    padding-top: 16px;
   }
   .reference-sheet h2 {
     font-size: 25pt;
   }
-  .reference-mini {
-    font-size: 24pt;
-  }
   .reference-sheet h3 {
-    font-size: 20pt;
+    font-size: 18pt;
+    line-height: 1.1;
   }
   @page {
     size: A4 landscape;

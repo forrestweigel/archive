@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { createPageMetadata, siteTitle, siteUrl } from "@/lib/metadata";
 
 const gothamNarrow = localFont({
   src: [
@@ -24,12 +25,12 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  ...createPageMetadata({ path: "/" }),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Archive — SHUFFLE. SPLIT. PLAY.",
+    default: siteTitle,
     template: "%s | Archive",
   },
-  description:
-    "Archive is a Commander variant for your existing legal deck: a 40-card Library, a 59-card Archive, and 30 starting life. Read the rules and setup instructions.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
