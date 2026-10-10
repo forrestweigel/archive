@@ -38,7 +38,7 @@ export function SiteHeader() {
         </nav>
         <Button asChild size="sm" className="hidden lg:inline-flex">
           <Link href="/feedback">
-            Playtest notes <ArrowUpRight />
+            Playtest feedback <ArrowUpRight />
           </Link>
         </Button>
         <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -59,7 +59,7 @@ export function SiteHeader() {
                 Archive navigation
               </Dialog.Title>
               <Dialog.Description className="sr-only">
-                Rules, reference materials, and playtest notes.
+                Rules, reference materials, and playtest feedback.
               </Dialog.Description>
               <Dialog.Close asChild>
                 <Button
@@ -77,7 +77,7 @@ export function SiteHeader() {
               >
                 {[
                   ...links,
-                  ["Playtest notes", "/feedback"],
+                  ["Playtest feedback", "/feedback"],
                   ["Changelog", "/changelog"],
                 ].map(([label, href]) => (
                   <Link

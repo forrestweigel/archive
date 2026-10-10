@@ -16,7 +16,7 @@ export function SiteFooter() {
           >
             <Link href="/rules">Complete rules</Link>
             <Link href="/reference">Reference card</Link>
-            <Link href="/feedback">Playtest notes</Link>
+            <Link href="/feedback">Playtest feedback</Link>
             <Link href="/changelog">Changelog</Link>
           </nav>
         </div>

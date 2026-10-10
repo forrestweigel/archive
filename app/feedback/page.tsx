@@ -3,8 +3,8 @@ import { PageIntro } from "@/components/page-intro";
 import { FeedbackForm } from "@/components/feedback-form";
 import troop from "@/app/artwork/troop.jpg";
 export const metadata = createPageMetadata({
-  title: "Playtest notes",
-  description: "Record an Archive Alpha game and download your playtest notes, including game length, Archive use, and rules questions.",
+  title: "Playtest feedback",
+  description: "Share feedback from an Archive Alpha game, including game length, Archive use, and rules questions.",
   path: "/feedback",
 });
 export default function Feedback() {
@@ -13,8 +13,8 @@ export default function Feedback() {
       <PageIntro
         artwork={troop}
         eyebrow="ARCHIVE ALPHA"
-        title="Playtest notes"
-        description="Record a game and download your notes. This form does not submit feedback."
+        title="Playtest feedback"
+        description="Tell us how your game went. Submit your playtest feedback directly to Archive."
       />
       <div className="shell section-pad grid gap-12 md:grid-cols-[1fr_2fr]">
         <aside>

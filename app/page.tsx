@@ -211,15 +211,14 @@ export default function Home() {
         </div>
         <div className="shell playtest-content flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <h2>PLAYTEST NOTES</h2>
+            <h2>PLAYTEST FEEDBACK</h2>
             <p className="mt-4 max-w-xl">
-              Record game length, Archive use, and rules questions in a
-              downloadable report.
+              Share game length, Archive use, and rules questions with Archive.
             </p>
           </div>
           <Button asChild size="lg">
             <Link href="/feedback">
-              Record a playtest <ArrowUpRight />
+              Share feedback <ArrowUpRight />
             </Link>
           </Button>
         </div>

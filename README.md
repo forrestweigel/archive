@@ -19,7 +19,7 @@ npm run start
 
 The build downloads Open Sans through `next/font/google`; allow HTTPS access to
 `fonts.googleapis.com` and `fonts.gstatic.com`. Gotham Narrow is supplied locally.
-No database or application credentials are required.
+No database is required. Feedback email delivery requires the server settings below.
 
 ## Content and pages
 
@@ -27,7 +27,7 @@ No database or application credentials are required.
 - `/rules`: renders the canonical `RULES.md` directly
 - `/faq`: Alpha rules questions
 - `/reference`: printable reference and downloadable text
-- `/feedback`: generates a local playtest report; no submission backend is connected
+- `/feedback`: emails playtest feedback to Archive, with an optional report download
 - `/changelog`: shipped rules releases, rendered from `CHANGELOG.md`
 
 Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
@@ -51,7 +51,7 @@ When an owner-approved release (such as Beta) is ready:
    and concrete changes from the previous release. Leave prior entries intact.
    Do not add unreleased entries or invent a date for the existing Alpha entry.
 3. Update current-release labels in the site, metadata, download filenames and
-   report headings, plus `AGENTS.md` and the Archive skill. Review homepage and
+   report and email headings, plus `AGENTS.md` and the Archive skill. Review homepage and
    FAQ summaries against the new rules. The rules page and reference card read
    their rules directly from `RULES.md`.
 4. Run lint and the production build; check the rules, changelog, reference
@@ -84,11 +84,40 @@ previous preview until they fetch the deployed URL again.
 ## Validation
 
 Lint and production build include TypeScript validation. Browser smoke checks
-covered all pages, FAQ expansion, mobile navigation, feedback downloads, and
+covered all pages, FAQ expansion, mobile navigation, feedback downloads (before email delivery was added), and
 reference printing. All pages were checked for horizontal overflow at 390px;
-the reference prints as one A4 landscape page. The form explicitly downloads
-answers to the user's device rather than claiming to submit them.
+the reference prints as one A4 landscape page. Email endpoint tests cover validation, recipient control, retry keys, and delivery
+failures. Run `npm test`; these mock the provider and do not send real emails.
 
 ## Brand
 
 See [the brand guide](docs/BRAND.md) for logo usage, colors, typography, and the permanent tagline **SHUFFLE. SPLIT. PLAY.** The owner-supplied logo variants are stored in `public/brand/`. Application colors are foreground `#000000`, background `#FFFFFF`, and primary `#C8371C`. It is the primary visual reference; the Magic website is a secondary reference for composition.
+
+## Feedback email setup
+
+The form posts to `/api/feedback`, which sends a plain-text report using the
+[Resend email API](https://resend.com/docs/api-reference/emails/send-email).
+The recipient defaults to `eldrxofficial@gmail.com`. No database is used.
+
+1. Create a Resend account and verify a sending domain you own (for example,
+   `playarchivemtg.com`) using the DNS records Resend supplies.
+2. Create a sending API key. Copy `.env.example` to `.env.local` and set
+   `RESEND_API_KEY` and `FEEDBACK_FROM_EMAIL` to the key and a sender on your
+   verified domain. `FEEDBACK_TO_EMAIL` optionally overrides the recipient.
+3. Add the same variables to the hosting provider's server environment and
+   redeploy. Never prefix them with `NEXT_PUBLIC_` or commit credentials.
+   Hosting must support Next.js Node.js route handlers; a static export cannot
+   send email through this endpoint.
+4. Submit a report on the deployed site and check the recipient's inbox and
+   spam folder, plus the delivery status in Resend. API acceptance confirms a
+   submission, not final inbox delivery.
+
+The endpoint validates and bounds input, uses a hidden spam-trap field, rejects
+cross-origin browser submissions, and uses Resend idempotency keys to avoid
+resending identical retries within the provider's retention window. These are
+basic protections, not a distributed rate limiter; configure the host's request
+rate limits for `/api/feedback` when deploying publicly.
+
+If configuration is missing or the provider fails, the form reports the error
+and keeps the answers available for retry or download. Automated tests mock
+Resend; a live delivery check requires configured credentials.
