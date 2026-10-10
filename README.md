@@ -78,8 +78,11 @@ For example, with Playwright's Chromium installed:
 npx --package=playwright playwright screenshot --browser=chromium --viewport-size="1200,630" --wait-for-timeout=2000 "file://$(pwd)/scripts/share-card.html" public/brand/share-card.png
 ```
 
-Check the resulting image before committing it. Social platforms may cache a
-previous preview until they fetch the deployed URL again.
+Check the resulting image before committing it. After regenerating the PNG,
+update the `?v=` value in `lib/metadata.ts` (for example, to the first eight
+characters of the PNG’s SHA-256 hash) so the image has a new preview URL.
+Social platforms may also cache the page metadata or existing messages; those
+previews may need a platform-specific refresh after deployment.
 
 ## Validation
 

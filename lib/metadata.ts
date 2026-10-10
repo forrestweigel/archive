@@ -6,7 +6,7 @@ export const siteDescription =
   "A Commander variant for your existing legal deck. Shuffle and split the 99 into a 40-card Library and a 59-card Archive. Start at 30 life. No rebuilding required.";
 
 const shareImage = {
-  url: "/brand/share-card.png",
+  url: "/brand/share-card.png?v=4fc67248",
   width: 1200,
   height: 630,
   alt: "Archive — SHUFFLE. SPLIT. PLAY. A Commander variant for your existing deck: 40-card Library, 59-card Archive, 30 starting life.",
