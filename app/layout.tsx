@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Archive",
   },
   description:
-    "A new way to play Commander. Bring your existing deck, split the 99 into a 40-card Library and 59-card Archive, and start a different story.",
+    "Archive is a Commander variant for your existing legal deck: a 40-card Library, a 59-card Archive, and 30 starting life. Read the rules and setup instructions.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

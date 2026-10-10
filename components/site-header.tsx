@@ -10,21 +10,20 @@ const links = [
   ["How to play", "/#how-to-play"],
   ["Rules", "/rules"],
   ["FAQ", "/faq"],
-  ["Resources", "/reference"],
+  ["Reference card", "/reference"],
 ];
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
     <header className="site-header">
-      <div className="shell flex h-22 items-center justify-between gap-6">
+      <div className="shell flex h-22 items-center justify-between gap-3 sm:gap-6">
         <Link href="/" aria-label="Archive home" className="flex shrink-0 items-center gap-3">
-          <Image src="/brand/icon.png" alt="" width={198} height={209} className="h-9 w-auto" />
-          <Image src="/brand/title.png" alt="Archive" width={1107} height={173} className="h-auto w-36 lg:w-44" priority />
+          <Image src="/brand/full-no-background.png" alt="Archive — Shuffle. Split. Play." width={1305} height={242} className="h-auto w-56 lg:w-72" priority />
         </Link>
         <nav
           aria-label="Main navigation"
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-8 lg:flex"
         >
           {links.map(([label, href]) => (
             <Link
@@ -37,9 +36,9 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Button asChild size="sm" className="hidden md:inline-flex">
+        <Button asChild size="sm" className="hidden lg:inline-flex">
           <Link href="/feedback">
-            Playtest Alpha <ArrowUpRight />
+            Playtest notes <ArrowUpRight />
           </Link>
         </Button>
         <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -47,7 +46,7 @@ export function SiteHeader() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="lg:hidden"
               aria-label="Open navigation"
             >
               <Menu />
@@ -57,10 +56,10 @@ export function SiteHeader() {
             <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60" />
             <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-[min(90vw,360px)] bg-background p-8 text-foreground">
               <Dialog.Title>
-                <Image src="/brand/title.png" alt="Archive" width={1107} height={173} className="h-auto w-40" />
+                Archive navigation
               </Dialog.Title>
-              <Dialog.Description className="mt-2 text-sm text-muted-foreground">
-                A new way to play your Commander deck.
+              <Dialog.Description className="sr-only">
+                Rules, reference materials, and playtest notes.
               </Dialog.Description>
               <Dialog.Close asChild>
                 <Button
@@ -78,7 +77,7 @@ export function SiteHeader() {
               >
                 {[
                   ...links,
-                  ["Playtest feedback", "/feedback"],
+                  ["Playtest notes", "/feedback"],
                   ["Changelog", "/changelog"],
                 ].map(([label, href]) => (
                   <Link

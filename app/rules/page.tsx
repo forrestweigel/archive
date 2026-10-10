@@ -9,23 +9,18 @@ export default function Rules() {
   return (
     <>
       <PageIntro
-        eyebrow="THE SOURCE OF TRUTH / ALPHA"
-        title="Small changes. New games."
-        description="The complete Archive rules. Unless these rules say otherwise, normal Commander rules apply."
+        title="Complete rules"
+        description="Unless these rules say otherwise, normal Commander rules apply."
       />
       <div className="shell section-pad grid gap-12 lg:grid-cols-[230px_1fr]">
         <aside>
           <p className="eyebrow mb-6">ARCHIVE ALPHA</p>
-          <p className="mb-6 text-sm leading-7 text-muted-foreground">
-            Keep the essentials beside you at the table.
-          </p>
           <Button asChild variant="outline">
             <Link href="/reference">Get the reference card</Link>
           </Button>
           <p className="mt-7 text-xs leading-6 text-muted-foreground">
-            Rules questions?{" "}
             <Link href="/faq" className="underline">
-              Start with the FAQ.
+              Frequently asked questions
             </Link>
           </p>
         </aside>

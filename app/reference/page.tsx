@@ -10,9 +10,8 @@ export default function Reference() {
   return (
     <>
       <PageIntro
-        eyebrow="YOUR TABLE COMPANION"
-        title="SHUFFLE. SPLIT. PLAY."
-        description="The essentials at a glance. Print both panels, save them as a PDF, or download a text copy for your next game."
+        title="Reference card"
+        description="Print both panels, save them as a PDF, or download a text copy."
       />
       <div className="shell section-pad print-area">
         <div className="no-print mb-9 flex flex-wrap gap-3">

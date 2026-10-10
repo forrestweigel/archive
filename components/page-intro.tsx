@@ -3,14 +3,14 @@ export function PageIntro({
   title,
   description,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
 }) {
   return (
     <section className="page-intro">
       <div className="shell">
-        <p className="eyebrow">{eyebrow}</p>
+        {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h1>{title}</h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-white/65">
           {description}

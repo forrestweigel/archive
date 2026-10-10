@@ -12,13 +12,15 @@ Use the owner-supplied assets unchanged, served from `/brand/`:
 
 | Asset | Use |
 | --- | --- |
-| `full-no-background.png` | Full transparent lockup with symbol, wordmark, and tagline; footer and spacious brand placements. |
-| `icon.png` | Standalone symbol; navigation icon and application favicon. |
+| `full-no-background.png` | Full transparent lockup with symbol, wordmark, and tagline; header and footer. |
+| `icon.png` | Standalone symbol; hero artwork and application favicon. |
 | `title-with-tagline.png` | Wordmark and tagline; reference card and other compact brand materials. |
-| `title.png` | Wordmark alone; navigation beside the symbol. |
+| `title.png` | Wordmark alone; available for placements that need only the name. |
 | `archive-logo-lockup.png` | Original white-background reference image, retained for provenance. |
 
 Preserve aspect ratios, colors, internal spacing, and arrangements. Leave generous space around each logo. Do not redraw, distort, add effects to, or replace the wordmark with a font. The transparent wordmarks are black; place them on white or compatible light surfaces. Transparency does not make them suitable for black backgrounds. Scale tagline-bearing variants only while the tagline remains readable.
+
+Use the full supplied logo in the site header at every screen size. Switch to mobile navigation when needed to leave room for the logo.
 
 Use meaningful alt text such as “Archive — Shuffle. Split. Play.” when the logo identifies the brand. A linked homepage logo should have an accessible name identifying Archive’s homepage.
 

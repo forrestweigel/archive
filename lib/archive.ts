@@ -1,6 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 
+export function getChangelog() {
+  return fs.readFileSync(path.join(process.cwd(), "CHANGELOG.md"), "utf8");
+}
+
 export function getRules() {
   return fs.readFileSync(path.join(process.cwd(), "RULES.md"), "utf8");
 }

@@ -10,7 +10,7 @@ export function DeckSplit() {
           <span>99</span>
           <small>SHUFFLED CARDS</small>
         </div>
-        <p>Your existing deck</p>
+        <p>Commander removed</p>
       </div>
       <ArrowRight className="split-arrow" aria-hidden="true" />
       <div className="deck-group">

@@ -38,7 +38,7 @@ The owner-supplied Archive logo is the primary visual identity reference. Read `
 
 Use [the official Magic website](https://magic.wizards.com/en) as a secondary reference for hierarchy, composition, and promotional presentation. Archive’s supplied logo and brand guidance take precedence.
 
-- A prominent supplied Archive logo and clear navigation; choose a background compatible with the available logo variant
+- Use the supplied full logo (`full-no-background.png`, including symbol, wordmark, and tagline) in the header on a compatible light background, with clear navigation
 - Large, immersive hero sections with bold display headings, concise supporting copy, and prominent calls to action
 - Image-led composition where original or explicitly supplied assets are available
 - Contrasting dark and light sections that give onboarding, rules, and resources distinct visual emphasis
@@ -86,6 +86,14 @@ The initial site should support:
 Keep the initial information architecture small. Avoid adding community, account, social, deckbuilding, or content features unless requested.
 
 ## Content conventions
+
+**Quality over quantity, every time.** Every heading, paragraph, section, and page must help a player understand the format or complete a task. Remove content that has no distinct purpose instead of filling space.
+
+- Use direct, descriptive headings and concrete explanations. Avoid vague promotional phrases, invented slogans, and decorative labels.
+- Keep the permanent brand tagline, but do not surround it with additional catchphrases.
+- Do not repeat information just to fill a layout. A short page is acceptable; an unnecessary section should be removed.
+- Describe what the site actually supports. Do not promise submissions, future features, or release plans that have not been established.
+- Keep `CHANGELOG.md` as a concise record of shipped rules releases, newest first. Preserve older entries; record actual changes and confirmed release dates. Do not add speculative Beta content, roadmaps, or repeat the rules to make the page longer. See `README.md` for the release workflow.
 
 The permanent brand tagline is **SHUFFLE. SPLIT. PLAY.** Preserve its uppercase lettering, word order, and periods. Use it in prominent brand placements; it complements the onboarding explanation and does not replace the setup rules.
 

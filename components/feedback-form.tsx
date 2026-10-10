@@ -71,12 +71,11 @@ export function FeedbackForm() {
       </div>
       <div>
         <label htmlFor="search" className="form-label">
-          Did Failed Search happen? Did it matter?
+          Did Failed Search occur, and how did it affect the game?
         </label>
         <Textarea
           id="search"
           name="Failed Search"
-          placeholder="Tell us about a moment that stood out"
         />
       </div>
       <div>
@@ -91,25 +90,22 @@ export function FeedbackForm() {
       </div>
       <div>
         <label htmlFor="notes" className="form-label">
-          How did it feel? Anything unclear?
+          What worked well, and which rules were unclear?
         </label>
         <Textarea
           id="notes"
           name="Enjoyment, rules questions, and other feedback"
-          placeholder="What worked, what surprised you, and what could be clearer"
         />
       </div>
       <p className="text-xs leading-6 text-muted-foreground">
-        This form creates a report on your device. It does not send or store
-        your answers. A direct submission channel will be added when available.
+        Your answers are downloaded as a text file. They are not sent to Archive.
       </p>
       <Button type="submit">
         <Download /> Download playtest report
       </Button>
       {downloaded && (
         <p role="status" className="flex items-center gap-2 text-sm">
-          <Check className="size-4" /> Your report is ready. Keep the downloaded
-          file to share with the organizer.
+          <Check className="size-4" /> Report download started. No feedback was submitted.
         </p>
       )}
     </form>

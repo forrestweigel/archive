@@ -133,21 +133,6 @@ a:focus-visible {
   margin-top: 25px;
   color: var(--foreground);
 }
-.hero-note {
-  font-size: 12px;
-  color: var(--muted-foreground);
-  margin-top: 16px;
-}
-.hero-bottom {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-block: 20px;
-  border-top: 1px solid var(--border);
-  font-size: 9px;
-  letter-spacing: 0.18em;
-  color: var(--muted-foreground);
-}
 .hero-art {
   position: absolute;
   z-index: -1;
@@ -160,23 +145,6 @@ a:focus-visible {
   height: auto;
   right: 8%;
   top: 18%;
-}
-.manifesto-bar {
-  background: #292929;
-  color: #cfcfcf;
-  padding-block: 22px;
-}
-.manifesto-bar span {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-}
-.manifesto-bar svg {
-  width: 16px;
-  color: #c0c0c0;
 }
 .section-pad {
   padding-block: 96px;
@@ -336,12 +304,6 @@ h2 {
 .mechanic-card strong {
   color: #fff;
 }
-.mechanic-number {
-  font-family: var(--font-gotham-narrow);
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 20px;
-}
 .mechanic-flow {
   display: flex;
   align-items: center;
@@ -392,10 +354,6 @@ h2 {
   width: 40px;
   height: 40px;
 }
-.resource-card .eyebrow {
-  color: #797979;
-  margin-bottom: 12px;
-}
 .resource-card h3 {
   font-size: 28px;
 }
@@ -403,10 +361,6 @@ h2 {
   background: var(--primary);
   padding-block: 64px;
   color: #fff;
-}
-.playtest-banner .eyebrow {
-  font-size: 10px;
-  margin-bottom: 16px;
 }
 .playtest-banner h2 {
   font-size: 44px;
@@ -560,16 +514,6 @@ h2 {
   }
   .hero-art {
     opacity: 0.45;
-  }
-  .hero-bottom {
-    font-size: 7px;
-    gap: 10px;
-  }
-  .manifesto-bar .shell {
-    justify-content: flex-start;
-  }
-  .manifesto-bar span {
-    font-size: 9px;
   }
   .section-heading {
     display: block;

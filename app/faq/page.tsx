@@ -13,9 +13,8 @@ export default function FAQ() {
   return (
     <>
       <PageIntro
-        eyebrow="BEFORE YOU SHUFFLE UP"
-        title="A little clarity."
-        description="Straight answers to the questions that come up around the table. All based on the current Alpha rules."
+        title="Frequently asked questions"
+        description="Deck setup, Archive access, and how Commander rules apply."
       />
       <div className="shell section-pad">
         <div className="max-w-3xl mx-auto">
@@ -28,13 +27,8 @@ export default function FAQ() {
             ))}
           </Accordion>
           <p className="mt-10 text-sm leading-7 text-muted-foreground">
-            Need the full picture?{" "}
             <Link className="underline text-foreground" href="/rules">
               Read the complete rules.
-            </Link>{" "}
-            Found something unclear during a game?{" "}
-            <Link href="/feedback" className="underline text-foreground">
-              Include it in your playtest feedback.
             </Link>
           </p>
         </div>

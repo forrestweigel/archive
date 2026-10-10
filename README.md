@@ -28,7 +28,7 @@ No database or application credentials are required.
 - `/faq`: Alpha rules questions
 - `/reference`: printable reference and downloadable text
 - `/feedback`: generates a local playtest report; no submission backend is connected
-- `/changelog`: public release information
+- `/changelog`: shipped rules releases, rendered from `CHANGELOG.md`
 
 Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
 rules or presentation. Keep homepage summaries and the FAQ consistent with
@@ -37,6 +37,30 @@ rules or presentation. Keep homepage summaries and the FAQ consistent with
 The hero uses the supplied Archive symbol; navigation, footer, reference card,
 and favicon use the owner-supplied logo variants.
 The shared UI uses shadcn-style Radix primitives, configured in `components.json`.
+
+## Publishing a rules release
+
+`RULES.md` describes the current release. `CHANGELOG.md` preserves the history.
+Quality over quantity applies to both site copy and release notes: publish only
+information players need, without padding short pages.
+
+When an owner-approved release (such as Beta) is ready:
+
+1. Update `RULES.md` with the approved rules and release designation.
+2. Prepend a release entry to `CHANGELOG.md` with its confirmed publication date
+   and concrete changes from the previous release. Leave prior entries intact.
+   Do not add unreleased entries or invent a date for the existing Alpha entry.
+3. Update current-release labels in the site, metadata, download filenames and
+   report headings, plus `AGENTS.md` and the Archive skill. Review homepage and
+   FAQ summaries against the new rules. The rules page and reference card read
+   their rules directly from `RULES.md`.
+4. Run lint and the production build; check the rules, changelog, reference
+   download, and playtest report. The changelog's current-rules link always goes
+   to `/rules`; do not label it as an older release's rules.
+
+Repeat this process for subsequent releases. Log later rules clarifications as
+dated entries describing the clarification. Routine website styling and copy
+edits belong in Git history, not the public rules changelog.
 
 ## Validation
 

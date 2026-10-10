@@ -116,7 +116,7 @@ Use [the official Magic website](https://magic.wizards.com/en) as a secondary gu
 
 ### Logo and tagline
 
-Use the supplied logo artwork rather than recreating the symbol or typesetting the wordmark. Preserve its proportions, colors, internal spacing, and tagline placement. The supplied variants are `full-no-background.png`, `icon.png`, `title-with-tagline.png`, and `title.png` in `public/brand/`. Use the full lockup for spacious brand placements, the symbol for icons and favicons, the title with tagline for reference materials, and the title alone for navigation. Black wordmarks need light surfaces. Preserve the supplied artwork; additional variants should come from the project owner.
+Use the supplied logo artwork rather than recreating the symbol or typesetting the wordmark. Preserve its proportions, colors, internal spacing, and tagline placement. The supplied variants are `full-no-background.png`, `icon.png`, `title-with-tagline.png`, and `title.png` in `public/brand/`. Use the full lockup in the header and footer, the symbol for icons and favicons, and the title with tagline for reference materials. Black wordmarks need light surfaces. Preserve the supplied artwork; additional variants should come from the project owner.
 
 The permanent brand tagline is **SHUFFLE. SPLIT. PLAY.** Keep the uppercase lettering, word order, and periods. Use Gotham Narrow when the tagline appears as separate text. Give it a prominent homepage or brand placement without repeating it next to a lockup that already includes it. Keep the plain-language onboarding explanation and setup diagram alongside the brand message.
 
@@ -171,6 +171,8 @@ Accessibility and mobile behavior are requirements, not optional polish.
 
 ## Homepage communication hierarchy
 
+Quality over quantity, every time. Keep only content that helps players understand the format or use the site. Use descriptive headings, remove repeated explanations and decorative slogans, and let short pages stay short. Preserve the permanent brand tagline without adding catchphrases around it. Describe available functionality accurately; do not promise unimplemented features.
+
 A first-time visitor should understand Archive in this order:
 
 1. **Archive is a Commander variant.**
@@ -223,7 +225,7 @@ Do not turn the feedback form into an exhaustive survey.
 
 ### Changelog
 
-Track public Archive releases beginning with **Alpha**. The changelog should document public releases and subsequent changes rather than internal brainstorming.
+Render `CHANGELOG.md` as a concise history of shipped rules releases, newest first. Begin with a brief Alpha entry. For each later release, preserve previous entries and add only actual changes and a confirmed release date. Do not invent dates, future mechanics, or a roadmap. Keep the current-rules link separate from historical entries so it never presents newer rules as an older release. Follow the release workflow in `README.md`.
 
 ## Reference card guidance
 

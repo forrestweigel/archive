@@ -6,8 +6,6 @@ import {
   Download,
   BookOpen,
   MessageSquare,
-  Shuffle,
-  Layers,
   Repeat2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,7 +20,7 @@ export default function Home() {
         </div>
         <div className="shell hero-content">
           <p className="eyebrow">
-            <span className="status-dot" /> A NEW WAY TO PLAY COMMANDER
+            <span className="status-dot" /> ARCHIVE ALPHA · A COMMANDER VARIANT
           </p>
           <h1>
             SHUFFLE.
@@ -31,11 +29,9 @@ export default function Home() {
             <span>PLAY.</span>
           </h1>
           <p className="hero-description">
-            Meet Archive. The Commander variant that turns the deck you know
-            into a game you don’t.
-          </p>
-          <p className="hero-note">
-            Same deck. No rebuilding. New possibilities.
+            Play with your existing legal Commander deck. Split the shuffled
+            99 into a 40-card Library and a 59-card Archive. Start at 30 life.
+            No rebuilding required.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -53,48 +49,23 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="hero-bottom shell">
-          <span>COMMANDER, REDISCOVERED.</span>
-          <span className="flex items-center gap-2">
-            <span className="status-dot" /> ALPHA · READY TO PLAY
-          </span>
-        </div>
       </section>
-      <div className="manifesto-bar">
-        <div className="shell flex flex-wrap items-center justify-center gap-x-12 gap-y-3">
-          <span>
-            <Shuffle /> BRING YOUR COMMANDER DECK
-          </span>
-          <span>
-            <Layers /> SPLIT THE POSSIBILITIES
-          </span>
-          <span>
-            <Repeat2 /> PLAY A DIFFERENT GAME
-          </span>
-        </div>
-      </div>
       <section id="how-to-play" className="section-paper section-pad">
         <div className="shell">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">01 / THE SETUP</p>
-              <h2>
-                ONE DECK.
-                <br />
-                TWO PILES. LET’S PLAY.
-              </h2>
+              <h2>SET UP YOUR GAME</h2>
             </div>
             <p>
-              Bring your existing legal Commander deck. Put your commander in
-              the command zone, then shuffle the other 99 cards. No rebuilding
-              required.
+              Put your commander in the command zone, then shuffle the other
+              99 cards.
             </p>
           </div>
           <DeckSplit />
           <div className="setup-caption">
             <p>
-              <strong>Don’t look. Don’t choose.</strong> The top 40 become your
-              Library. The remaining 59 become your Archive.
+              Without looking at or choosing cards, take the top 40 as your
+              Library. Place the remaining 59 face down as your Archive.
             </p>
             <div className="life-callout">
               <span>30</span>
@@ -109,21 +80,16 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">02 / THE TWIST</p>
-              <h2>
-                A LITTLE UNKNOWN.
-                <br />A LOT TO PLAY FOR.
-              </h2>
+              <h2>USING YOUR ARCHIVE</h2>
             </div>
             <p>
               Your Archive stays face down, separate from your Library. Two
-              simple rules let you tap into what’s waiting there.
+              rules let you move cards into your hand.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="mechanic-card">
               <CardHeader>
-                <span className="mechanic-number">01</span>
                 <CardTitle>Failed Search</CardTitle>
               </CardHeader>
               <CardContent>
@@ -145,14 +111,14 @@ export default function Home() {
             </Card>
             <Card className="mechanic-card">
               <CardHeader>
-                <span className="mechanic-number">02</span>
                 <CardTitle>Archive Exchange</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>
                   Once during each of your turns, <strong>as a sorcery</strong>,
                   you may put a card from your hand on the bottom of your
-                  Archive. If you do, take its top card into your hand.
+                  Archive. If you do, put the top card of your Archive into
+                  your hand.
                 </p>
                 <div className="mechanic-flow">
                   <span>HAND → BOTTOM</span>
@@ -160,7 +126,7 @@ export default function Home() {
                   <span>TOP → HAND</span>
                 </div>
                 <p className="text-sm text-white/50">
-                  One card in. One card out. Exchange doesn’t discard or exile.
+                  Exchange doesn’t discard or exile the card.
                 </p>
               </CardContent>
             </Card>
@@ -171,7 +137,7 @@ export default function Home() {
               not a backup Library.
             </p>
             <Link href="/rules" className="text-link shrink-0">
-              Explore the complete rules <ArrowUpRight />
+              Read the complete rules <ArrowUpRight />
             </Link>
           </div>
         </div>
@@ -180,43 +146,31 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">03 / BRING IT TO THE TABLE</p>
-              <h2>
-                LESS PREP.
-                <br />
-                MORE PLAY.
-              </h2>
+              <h2>RULES & REFERENCE</h2>
             </div>
-            <p>
-              A quick reference for your next game. The details when you need
-              them. Everything to get your table started.
-            </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {[
               {
                 icon: BookOpen,
-                title: "The complete rules",
-                text: "Every Alpha rule, in one place. Get your whole table on the same page.",
+                title: "Complete rules",
+                text: "Setup, Archive mechanics, and how normal Commander rules apply.",
                 href: "/rules",
                 cta: "Read the rules",
-                tag: "THE SOURCE OF TRUTH",
               },
               {
                 icon: Download,
-                title: "Your table companion",
-                text: "Keep setup and both mechanics close at hand with a printable reference card.",
+                title: "Reference card",
+                text: "Print the setup and mechanics, save a PDF, or download a text copy.",
                 href: "/reference",
-                cta: "Get the reference",
-                tag: "READY FOR GAME NIGHT",
+                cta: "Get the reference card",
               },
               {
                 icon: MessageSquare,
-                title: "Questions? Covered.",
-                text: "From Failed Search to an empty Library. Clear answers before you shuffle up.",
+                title: "Frequently asked questions",
+                text: "Search restrictions, Exchange timing, and an empty Library.",
                 href: "/faq",
-                cta: "Explore the FAQ",
-                tag: "A LITTLE CLARITY",
+                cta: "Read the FAQ",
               },
             ].map(({ icon: Icon, ...item }) => (
               <Card key={item.href} className="resource-card">
@@ -224,7 +178,6 @@ export default function Home() {
                   <div className="resource-icon">
                     <Icon strokeWidth={1.5} />
                   </div>
-                  <p className="eyebrow text-[10px]">{item.tag}</p>
                   <CardTitle>{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-1 flex-col">
@@ -244,14 +197,10 @@ export default function Home() {
       <section className="playtest-banner">
         <div className="shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <p className="eyebrow">HELP WRITE THE NEXT CHAPTER</p>
-            <h2>
-              SHUFFLE UP. TRY IT.
-              <br />
-              TELL US WHAT HAPPENED.
-            </h2>
+            <h2>PLAYTEST NOTES</h2>
             <p className="mt-4 max-w-xl">
-              Archive is in Alpha. Your games help shape where it goes next.
+              Record game length, Archive use, and rules questions in a
+              downloadable report.
             </p>
           </div>
           <Button
@@ -260,7 +209,7 @@ export default function Home() {
             className="bg-black text-white hover:bg-black"
           >
             <Link href="/feedback">
-              Share playtest feedback <ArrowUpRight />
+              Record a playtest <ArrowUpRight />
             </Link>
           </Button>
         </div>
