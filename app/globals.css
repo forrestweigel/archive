@@ -289,31 +289,91 @@ h2 {
 .mechanic-card strong {
   color: #fff;
 }
-/* Shared vector diagrams stay legible on dark cards and on paper. */
 .mechanic-diagram {
-  display: block;
   width: 100%;
-  height: auto;
   margin-block: 16px;
   color: #222;
+  align-content: center;
 }
 .mechanic-card .mechanic-diagram {
   color: #eee;
-  padding-block: 12px;
+  padding-block: 20px;
   border-block: 1px solid #ffffff26;
 }
-.mechanic-diagram text {
-  fill: currentColor;
-  font-family: var(--font-open-sans), Arial, sans-serif;
-  font-size: 16px;
+.card-movement {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  align-items: center;
+  gap: 12px;
 }
-.mechanic-diagram .diagram-label {
-  font-size: 14px;
+.movement-endpoint,
+.movement-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.movement-endpoint > svg {
+  width: 40px;
+  height: 40px;
+}
+.movement-endpoint > span {
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
-.diagram-accent {
+.movement-action > span {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.movement-action > svg {
+  width: 32px;
+  height: 32px;
   color: var(--primary);
+}
+.exchange-steps {
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.search-steps {
+  display: grid;
+  gap: 24px;
+}
+.search-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.search-trigger svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .mechanics-grid > .mechanic-card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+  }
+  .mechanic-card > [data-slot="card-content"] {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+}
+@media (max-width: 380px) {
+  .card-movement {
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    gap: 8px;
+  }
 }
 .text-link {
   display: inline-flex;
@@ -762,8 +822,23 @@ h2 {
     margin-block: 8px;
   }
   .reference-sheet .mechanic-diagram {
-    max-height: 112px;
     margin-block: 10px;
+  }
+  .reference-sheet .movement-endpoint > svg {
+    width: 28px;
+    height: 28px;
+  }
+  .reference-sheet .movement-action > svg {
+    width: 24px;
+    height: 24px;
+  }
+  .reference-sheet .movement-action > span,
+  .reference-sheet .search-trigger {
+    font-size: 11px;
+  }
+  .reference-sheet .exchange-steps,
+  .reference-sheet .search-steps {
+    gap: 10px;
   }
   .reference-sheet .setup-diagram {
     max-height: 150px;

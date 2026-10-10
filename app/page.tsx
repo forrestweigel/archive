@@ -94,7 +94,7 @@ export default function Home() {
               rules let you move cards into your hand.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="mechanics-grid grid gap-6 md:grid-cols-2">
             <Card className="mechanic-card">
               <CardHeader>
                 <CardTitle>Failed Search</CardTitle>
@@ -118,7 +118,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Once during each of your turns, <strong>as a sorcery</strong>,
+                  <strong>Once during each of your turns</strong>, <strong>as a sorcery</strong>,
                   you may put a card from your hand on the bottom of your
                   Archive. If you do, put the top card of your Archive into
                   your hand.
