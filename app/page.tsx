@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { DeckSplit } from "@/components/deck-split";
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className="shell hero-content">
           <p className="eyebrow">
-            <span className="status-dot" /> ARCHIVE ALPHA · A COMMANDER VARIANT
+            <Circle className="status-dot" fill="currentColor" aria-hidden="true" /> ARCHIVE ALPHA · A COMMANDER VARIANT
           </p>
           <h1>
             SHUFFLE.
@@ -107,7 +107,7 @@ export default function Home() {
                 </p>
                 <MechanicDiagram type="search" />
                 <p className="text-sm text-white/50">
-                  Finding one or more cards doesn’t count. Normal Magic rules
+                  Finding one or more cards doesn&apos;t count. Normal Magic rules
                   determine whether you may find zero.
                 </p>
               </CardContent>
@@ -125,7 +125,7 @@ export default function Home() {
                 </p>
                 <MechanicDiagram type="exchange" />
                 <p className="text-sm text-white/50">
-                  Exchange doesn’t discard or exile the card.
+                  Exchange doesn&apos;t discard or exile the card.
                 </p>
               </CardContent>
             </Card>

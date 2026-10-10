@@ -1,4 +1,4 @@
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, Layers, Plus, Shuffle } from "lucide-react";
 export function DeckSplit() {
   return (
     <div
@@ -6,7 +6,8 @@ export function DeckSplit() {
       aria-label="Shuffle 99 cards, split into a 40-card Library and a 59-card Archive"
     >
       <div className="deck-group">
-        <div className="deck-stack deck-original">
+        <div className="deck-stack">
+          <Shuffle className="deck-icon" strokeWidth={1.5} aria-hidden="true" />
           <span>99</span>
           <small>SHUFFLED CARDS</small>
         </div>
@@ -14,7 +15,8 @@ export function DeckSplit() {
       </div>
       <ArrowRight className="split-arrow" aria-hidden="true" />
       <div className="deck-group">
-        <div className="deck-stack deck-library">
+        <div className="deck-stack">
+          <Layers className="deck-icon" strokeWidth={1.5} aria-hidden="true" />
           <span>40</span>
           <small>LIBRARY</small>
         </div>
@@ -22,7 +24,8 @@ export function DeckSplit() {
       </div>
       <Plus className="split-plus" aria-hidden="true" />
       <div className="deck-group">
-        <div className="deck-stack deck-archive">
+        <div className="deck-stack">
+          <Layers className="deck-icon" strokeWidth={1.5} aria-hidden="true" />
           <span>59</span>
           <small>ARCHIVE</small>
         </div>
