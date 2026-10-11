@@ -1,4 +1,4 @@
-# Archive — Alpha Rules
+# Archive: Alpha Rules
 
 **Release:** Alpha  
 **Website:** playarchivemtg.com
@@ -20,7 +20,7 @@ Archive does not require players to rebuild or modify their Commander decks.
 5. Each player begins the game with **30 life**.
 6. Continue normal Commander setup and begin the game.
 
-Your starting Library is always 50 cards. Your Archive is the rest of the shuffled deck—usually 49 cards.
+Your starting Library is always 50 cards. Your Archive is the rest of the shuffled deck, usually 49 cards.
 
 The Archive is separate from the Library. Cards in the Archive can only be accessed or moved by Archive-specific rules.
 

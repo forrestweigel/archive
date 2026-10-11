@@ -17,7 +17,7 @@ export function ReferenceCard() {
         </div>
         <div className="reference-grid grid gap-6 lg:grid-cols-2">
           <section className="reference-sheet">
-            <Image src="/brand/full-no-background.png" alt="Archive — Shuffle. Split. Play." width={1305} height={242} className="h-auto w-full max-w-80" />
+            <Image src="/brand/full-no-background.png" alt="Archive: Shuffle. Split. Play." width={1305} height={242} className="h-auto w-full max-w-80" />
             <p className="eyebrow mt-4 text-primary">ALPHA</p>
             <h2 className="reference-setup-heading">Set up your game</h2>
             <div className="reference-commander">

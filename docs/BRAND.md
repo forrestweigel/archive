@@ -22,7 +22,7 @@ Preserve aspect ratios, colors, internal spacing, and arrangements. Leave genero
 
 Use the full supplied logo in the site header at every screen size. Switch to mobile navigation when needed to leave room for the logo.
 
-Use meaningful alt text such as “Archive — Shuffle. Split. Play.” when the logo identifies the brand. A linked homepage logo should have an accessible name identifying Archive’s homepage.
+Use meaningful alt text such as “Archive: Shuffle. Split. Play.” when the logo identifies the brand. A linked homepage logo should have an accessible name identifying Archive’s homepage.
 
 ## Tagline
 

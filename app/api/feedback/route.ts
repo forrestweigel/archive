@@ -75,7 +75,7 @@ export async function POST(request: Request) {
     return error("Feedback delivery is not available yet. Your answers are still here; please try again later.", 503);
   }
   const text = [
-    "ARCHIVE ALPHA — PLAYTEST REPORT",
+    "ARCHIVE ALPHA: PLAYTEST REPORT",
     ...fields.map(([key, label]) => `${label}: ${answers[key] || "Not provided"}`),
   ].join("\n\n");
   // Retries of unchanged answers reuse the key; edited answers get a new key.

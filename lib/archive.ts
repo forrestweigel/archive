@@ -19,7 +19,7 @@ export function getRuleSection(number: number) {
 export const faqs = [
   [
     "Why was Archive created?",
-    "Archive aims to increase variety, weaken decks that rely on a single plan, speed up games, narrow power gaps, and help with mana flood and starvation—all using your existing Commander decks without rebuilding.",
+    "Archive aims to increase variety, weaken decks that rely on a single plan, speed up games, narrow power gaps, and help with mana flood and starvation, all using your existing Commander decks without rebuilding.",
     "/about",
   ],
   [

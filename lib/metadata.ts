@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const siteUrl = "https://playarchivemtg.com";
-export const siteTitle = "Archive — SHUFFLE. SPLIT. PLAY.";
+export const siteTitle = "Archive: SHUFFLE. SPLIT. PLAY.";
 export const siteDescription =
   "A Commander variant for your existing legal deck. Split your shuffled deck into a 50-card Library and a 49-card Archive. Start at 30 life. No rebuilding required.";
 
@@ -9,7 +9,7 @@ const shareImage = {
   url: "/brand/share-card.png?v=b1467256",
   width: 1200,
   height: 630,
-  alt: "Archive — SHUFFLE. SPLIT. PLAY. A Commander variant for your existing deck: 50-card Library, 49-card Archive, 30 starting life.",
+  alt: "Archive: SHUFFLE. SPLIT. PLAY. A Commander variant for your existing deck: 50-card Library, 49-card Archive, 30 starting life.",
 };
 
 export function createPageMetadata({

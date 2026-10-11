@@ -1,4 +1,4 @@
-# Archive Website — Codex Instructions
+# Archive Website: Codex Instructions
 
 ## Project
 
@@ -102,6 +102,7 @@ Keep the initial information architecture small. Avoid adding community, account
 
 **Quality over quantity, every time.** Every heading, paragraph, section, and page must help a player understand the format or complete a task. Remove content that has no distinct purpose instead of filling space.
 
+- Do not use em dashes in application copy, metadata, downloads, or documentation.
 - Use direct, descriptive headings and concrete explanations. Avoid vague promotional phrases, invented slogans, and decorative labels.
 - Keep the permanent brand tagline, but do not surround it with additional catchphrases.
 - Do not repeat information just to fill a layout. A short page is acceptable; an unnecessary section should be removed.

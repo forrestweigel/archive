@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div className="flex flex-col justify-between gap-10 border-b border-border pb-10 md:flex-row">
           <div>
             <Link href="/" aria-label="Archive home">
-              <Image src="/brand/full-no-background.png" alt="Archive — Shuffle. Split. Play." width={1305} height={242} className="h-auto w-full max-w-80" />
+              <Image src="/brand/full-no-background.png" alt="Archive: Shuffle. Split. Play." width={1305} height={242} className="h-auto w-full max-w-80" />
             </Link>
           </div>
           <nav

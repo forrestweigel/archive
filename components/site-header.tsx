@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="shell flex h-22 items-center justify-between gap-3 sm:gap-6">
         <Link href="/" aria-label="Archive home" className="flex shrink-0 items-center gap-3">
-          <Image src="/brand/full-no-background.png" alt="Archive — Shuffle. Split. Play." width={1305} height={242} className="h-auto w-56 lg:w-72" priority />
+          <Image src="/brand/full-no-background.png" alt="Archive: Shuffle. Split. Play." width={1305} height={242} className="h-auto w-56 lg:w-72" priority />
         </Link>
         <nav
           aria-label="Main navigation"
