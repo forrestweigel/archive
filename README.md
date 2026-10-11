@@ -24,10 +24,11 @@ No database is required. Feedback email delivery requires the server settings be
 ## Content and pages
 
 - `/`: overview, setup, and core mechanics
-- `/rules`: renders the canonical `RULES.md` directly
+- `/rules`: renders the canonical `RULES.md` and printable reference card with save-as-PDF support
 - `/faq`: Alpha rules questions
-- `/reference`: printable reference and downloadable text
-- `/feedback`: emails playtest feedback to Archive, with an optional report download
+- `/about`: the six design goals behind Archive
+- `/reference`: redirects to `/rules#reference-card`
+- `/feedback`: emails playtest feedback to Archive
 - `/changelog`: shipped rules releases, rendered from `CHANGELOG.md`
 
 Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
@@ -122,5 +123,5 @@ basic protections, not a distributed rate limiter; configure the host's request
 rate limits for `/api/feedback` when deploying publicly.
 
 If configuration is missing or the provider fails, the form reports the error
-and keeps the answers available for retry or download. Automated tests mock
+and keeps the answers available for retry. Automated tests mock
 Resend; a live delivery check requires configured credentials.

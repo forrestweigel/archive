@@ -22,12 +22,12 @@ export function SiteFooter() {
         </div>
         <div className="mt-7 flex flex-col justify-between gap-4 text-xs leading-6 text-muted-foreground md:flex-row">
           <p className="max-w-2xl">
-            Archive is Commander variant created and maintained by Eldrx Games LLC. 
+            Archive is a Commander variant created and maintained by Eldrx Games LLC. 
             Magic: The Gathering is a trademark of Wizards of the Coast.
             Archive is not affiliated with or endorsed by Wizards of the Coast.
           </p>
           <span className="shrink-0 uppercase tracking-[.18em]">
-            Archive Alpha · playarchivemtg.com
+            Archive Alpha
           </span>
         </div>
       </div>
