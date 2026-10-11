@@ -32,7 +32,7 @@ export const faqs = [
   ],
   [
     "Does the Archive always start with 49 cards?",
-    "No. The standard split is a 50-card Library and a 49-card Archive. Your Library always starts with 50 cards before normal Commander setup continues. All remaining deck cards become your Archive, so it may not contain exactly 49 cards.",
+    "Not necessarily. Take the top 50 cards of your shuffled deck for your Library, then put the rest into your Archive. That will usually be 49 cards.",
   ],
   [
     "Can I search or look through my Archive?",

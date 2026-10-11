@@ -20,7 +20,7 @@ Archive does not require players to rebuild or modify their Commander decks.
 5. Each player begins the game with **30 life**.
 6. Continue normal Commander setup and begin the game.
 
-The standard split is a 50-card Library and a 49-card Archive. The Library always starts with 50 cards before normal Commander setup continues. All remaining deck cards become the Archive, so it may not contain exactly 49 cards.
+Your starting Library is always 50 cards. Your Archive is the rest of the shuffled deck—usually 49 cards.
 
 The Archive is separate from the Library. Cards in the Archive can only be accessed or moved by Archive-specific rules.
 
