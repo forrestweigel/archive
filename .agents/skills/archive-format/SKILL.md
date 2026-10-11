@@ -66,7 +66,7 @@ Exchange is a one-for-one exchange. It keeps the Archive central to gameplay whi
 
 ### Research
 
-Once during each of their turns, as a sorcery, a player may pay {4}. If they do, they put the top card of their Archive into their hand. This is four generic mana and does not require an empty hand.
+Once during each of their turns, as a sorcery, a player may pay 4 mana of any type. If they do, they put the top card of their Archive into their hand. Research does not require an empty hand.
 
 Exchange and Research each have their own once-per-turn limit, so both may be used in the same turn. Discovery, Exchange, and Research put cards into hand; none of these actions is a card draw.
 
@@ -113,7 +113,7 @@ The once-per-turn sorcery-speed format action that puts a card from hand on the 
 
 **Research**
 
-The once-per-turn sorcery-speed format action that costs {4} and puts the top Archive card into hand. It has a separate limit from Exchange.
+The once-per-turn sorcery-speed format action that costs 4 mana of any type and puts the top Archive card into hand. It has a separate limit from Exchange.
 
 **Alpha**  
 The current public release designation. Prefer `Archive Alpha` when context is needed.
@@ -246,7 +246,7 @@ Do not turn the feedback form into an exhaustive survey.
 
 ### Changelog
 
-Render `CHANGELOG.md` as a concise history of shipped rules releases, newest first. Begin with a brief Alpha entry. For each later release, preserve previous entries and add only actual changes and a confirmed release date. Do not invent dates, future mechanics, or a roadmap. Keep the current-rules link separate from historical entries so it never presents newer rules as an older release. Follow the release workflow in `README.md`.
+Render `CHANGELOG.md` as a concise history of shipped rules releases, newest first. Begin with a brief Alpha entry. Use `Alpha Revision X` headings for subsequent Alpha revisions. For each later release, preserve previous entries and add only actual changes and a confirmed release date. Do not invent dates, future mechanics, or a roadmap. Keep the current-rules link separate from historical entries so it never presents newer rules as an older release. Follow the release workflow in `README.md`.
 
 ## Reference card guidance
 

@@ -137,7 +137,7 @@ export default function Home() {
               <CardContent>
                 <p>
                   <strong>Once during each of your turns</strong>, <strong>as a sorcery</strong>,
-                  you may pay <strong>{`{${archiveFormat.researchManaCost}}`}</strong>.
+                  you may pay <strong>{archiveFormat.researchManaCost} mana of any type</strong>.
                   If you do, put the top card of your Archive into your hand.
                 </p>
                 <MechanicDiagram type="research" />

@@ -40,7 +40,7 @@ Exchange does not discard or exile the card placed into the Archive.
 
 ## 5. Research
 
-**Once during each of your turns, as a sorcery, you may pay {4}. If you do, put the top card of your Archive into your hand.**
+**Once during each of your turns, as a sorcery, you may pay 4 mana of any type. If you do, put the top card of your Archive into your hand.**
 
 Research and Exchange have separate once-per-turn limits. You may use both during the same turn.
 

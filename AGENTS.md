@@ -107,7 +107,7 @@ Keep the initial information architecture small. Avoid adding community, account
 - Keep the permanent brand tagline, but do not surround it with additional catchphrases.
 - Do not repeat information just to fill a layout. A short page is acceptable; an unnecessary section should be removed.
 - Describe what the site actually supports. Do not promise submissions, future features, or release plans that have not been established.
-- Keep `CHANGELOG.md` as a concise record of shipped rules releases, newest first. Preserve older entries; record actual changes and confirmed release dates. Do not add speculative Beta content, roadmaps, or repeat the rules to make the page longer. See `README.md` for the release workflow.
+- Keep `CHANGELOG.md` as a concise record of shipped rules releases, newest first. Use `Alpha Revision X` headings for Alpha revisions. Preserve older entries; record actual changes and confirmed release dates. Do not add speculative Beta content, roadmaps, or repeat the rules to make the page longer. See `README.md` for the release workflow.
 
 The permanent brand tagline is **SHUFFLE. SPLIT. PLAY.** Preserve its uppercase lettering, word order, and periods. Use it in prominent brand placements; it complements the onboarding explanation and does not replace the setup rules.
 
@@ -121,7 +121,7 @@ Capitalize defined format terms consistently:
 - Exchange
 - Research
 
-Discovery applies when a Library search finds zero cards. Exchange and Research are each available once during each of your turns, as a sorcery, with separate limits. Research costs {4}; it does not require an empty hand. All three mechanics put the top Archive card into hand without drawing it.
+Discovery applies when a Library search finds zero cards. Exchange and Research are each available once during each of your turns, as a sorcery, with separate limits. Research costs 4 mana of any type; it does not require an empty hand. All three mechanics put the top Archive card into hand without drawing it.
 
 Use concise explanations. The homepage should teach the format quickly; `RULES.md` should drive the detailed rules page and FAQ.
 

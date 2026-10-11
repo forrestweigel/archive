@@ -49,7 +49,7 @@ export const faqs = [
   ],
   [
     "How does Research work?",
-    `Once during each of your turns, as a sorcery, you may pay {${archiveFormat.researchManaCost}} (${archiveFormat.researchManaCost} mana of any type) to put the top card of your Archive into your hand. You do not need an empty hand.`,
+    `Once during each of your turns, as a sorcery, you may pay ${archiveFormat.researchManaCost} mana of any type to put the top card of your Archive into your hand. You do not need an empty hand.`,
   ],
   [
     "Can I use Exchange and Research in the same turn?",

@@ -115,8 +115,7 @@ export default function Rules() {
             </CardHeader>
             <CardContent className="space-y-4 text-sm leading-7 text-muted-foreground">
               <p>
-                On your turn, at sorcery speed, pay {`{${archiveFormat.researchManaCost}}`}:
-                {" "}{archiveFormat.researchManaCost} mana of any type. Put the top card of your
+                On your turn, at sorcery speed, pay {archiveFormat.researchManaCost} mana of any type. Put the top card of your
                 Archive into your hand. You keep the cards already in your hand.
               </p>
               <p>
