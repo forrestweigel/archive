@@ -17,20 +17,20 @@ For exact gameplay rules, always read the repository-root `RULES.md`. `RULES.md`
 
 A normal Commander deck is transformed at game setup:
 
-- The commander remains the normal commander.
-- The other 99 cards are shuffled.
-- 40 become the player's Library.
-- 59 become the player's face-down Archive.
+- The commander or commanders go in the command zone as normal.
+- All remaining deck cards are shuffled.
+- 50 become the player's Library.
+- 49 cards become the player's face-down Archive in the standard split.
 - Players start at 30 life.
 
-The random 40-card Library means the same Commander deck can produce substantially different games.
+The random 50-card Library means the same Commander deck can produce substantially different games.
 
 ## Core experience
 
 Archive is intended to:
 
 - Let players use Commander decks they already own.
-- Reduce deterministic access to a deck's full 99.
+- Reduce deterministic access to the full deck.
 - Reduce the consistency of tutors, linear packages, and exact-card plans.
 - Reward redundancy, flexible cards, improvisation, and adapting to what is available.
 - Produce somewhat faster games through a smaller Library and 30 starting life.
@@ -73,7 +73,7 @@ Players receive the top card of the Archive rather than searching it. Do not cas
 
 ### Variance is intentional
 
-The 40-card Library is not a problem the website should apologize for or attempt to solve. The random subset is central to the format.
+The 50-card Library is not a problem the website should apologize for or attempt to solve. The random subset is central to the format.
 
 ### Keep the rules small
 
@@ -81,17 +81,17 @@ Archive should feel like Commander plus a small number of meaningful changes. Av
 
 ### Let games end
 
-The 40-card Library and 30 starting life are part of the format's pacing. The Archive is not intended to automatically refill or replace an exhausted Library.
+The 50-card Library and 30 starting life are part of the format's pacing. The Archive is not intended to automatically refill or replace an exhausted Library.
 
 ## Terminology
 
 Use these terms consistently.
 
 **Archive**  
-The face-down 59-card pile created during setup. It is separate from the Library and ordinary Magic zones.
+The face-down pile of 49 cards in the standard setup. It is separate from the Library and ordinary Magic zones.
 
 **Library**  
-The 40-card Library created from the shuffled 99 during Archive setup.
+The Library always starts with 50 cards from the shuffled deck during Archive setup, before normal Commander setup continues.
 
 **Failed Search**  
 The Archive rule that applies when a Library search finds zero cards.
@@ -141,7 +141,7 @@ Use:
 - **Open Sans** for body text and supporting interface copy
 - Load the supplied `app/fonts/GothamNarrow-Bold.woff2` (700) and `app/fonts/GothamNarrow-Black.woff2` (900) through `next/font/local`; use Black for primary display headings and Bold for other headings
 - Editorial resource grids, clear card headings, and generous spacing
-- A prominent, readable `99 → 40 Library + 59 Archive` setup diagram
+- A prominent, readable `99 → 50 Library + 49 Archive` setup diagram
 - Responsive layouts, accessible contrast, and visible keyboard focus states
 
 Keep the homepage’s rules and onboarding clear within this more expressive presentation. Visual richness should support the message that players can bring their existing Commander decks.
@@ -177,7 +177,7 @@ A first-time visitor should understand Archive in this order:
 
 1. **Archive is a Commander variant.**
 2. **Use the Commander deck you already have.**
-3. **Shuffle the 99 and split it into a 40-card Library and 59-card Archive.**
+3. **Put your commander or commanders in the command zone, shuffle the remaining deck, and take 50 cards as your Library. The remaining 49 cards become your Archive.**
 4. **Start at 30 life.**
 5. **Learn Failed Search.**
 6. **Learn Exchange.**
@@ -185,7 +185,9 @@ A first-time visitor should understand Archive in this order:
 
 The visual centerpiece should be the setup transformation:
 
-`99 → 40 LIBRARY + 59 ARCHIVE`
+`99 → 50 LIBRARY + 49 ARCHIVE`
+
+Use 50/49 in standard setup copy and visuals. The rules and FAQ clarify that the Library starts with 50 cards and all remaining deck cards become the Archive, which may not contain exactly 49 cards. Keep this clarification general; do not enumerate edge cases.
 
 Do not bury this below extensive explanation.
 
@@ -236,7 +238,7 @@ Front:
 - Supplied Archive logo, with **SHUFFLE. SPLIT. PLAY.** readable when space allows
 - Alpha designation
 - Setup in plain text
-- Strong visual: `99 → 40 Library + 59 Archive`
+- Strong visual: `99 → 50 Library + 49 Archive`
 - Starting Life: 30
 - Brief Archive definition
 - `All other Commander rules apply.`

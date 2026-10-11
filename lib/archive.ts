@@ -19,11 +19,15 @@ export function getRuleSection(number: number) {
 export const faqs = [
   [
     "Do I need to build a new deck?",
-    "No. Bring an existing legal Commander deck: 1 commander and 99 other cards. Archive does not require you to rebuild or modify it.",
+    "No. Bring an existing legal Commander deck of 100 cards, including your commander or commanders. Archive does not require you to rebuild or modify it.",
   ],
   [
     "Can I choose which cards go into my Library?",
-    "No. Shuffle the 99 cards, then take the top 40 as your Library without looking at or choosing cards. The remaining 59 become your face-down Archive.",
+    "No. Put your commander or commanders in the command zone, shuffle the remaining cards, then take the top 50 as your Library without looking at or choosing cards. All remaining cards become your face-down Archive.",
+  ],
+  [
+    "Does the Archive always start with 49 cards?",
+    "No. The standard split is a 50-card Library and a 49-card Archive. Your Library always starts with 50 cards before normal Commander setup continues. All remaining deck cards become your Archive, so it may not contain exactly 49 cards.",
   ],
   [
     "Can I search or look through my Archive?",

@@ -43,10 +43,10 @@ export default function Reference() {
             <h2 className="reference-setup-heading">Set up your game</h2>
             <div className="reference-commander">
               <Crown aria-hidden="true" />
-              <p>Put your commander in the command zone. Shuffle the other 99 cards.</p>
+              <p>Put your commander or commanders in the command zone. Shuffle the remaining cards.</p>
             </div>
             <SetupDiagram />
-            <p className="reference-split-note">Split without looking at or choosing cards.</p>
+            <p className="reference-split-note">Take the top 50 without looking at or choosing cards. Place the remaining 49 cards face down as your Archive.</p>
             <div className="reference-life">
               <strong className="reference-life-total">30</strong>
               <div><h3>Starting life</h3><p>Continue normal Commander setup.</p></div>

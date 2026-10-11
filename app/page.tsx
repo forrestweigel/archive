@@ -36,8 +36,8 @@ export default function Home() {
             PLAY.
           </h1>
           <p className="hero-description">
-            Play with your existing legal Commander deck. Split the shuffled
-            99 into a 40-card Library and a 59-card Archive. Start at 30 life.
+            Play with your existing legal Commander deck. Split your shuffled deck
+            into a 50-card Library and a 49-card Archive. Start at 30 life.
             No rebuilding required.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -64,15 +64,15 @@ export default function Home() {
               <h2>SET UP YOUR GAME</h2>
             </div>
             <p>
-              Put your commander in the command zone, then shuffle the other
-              99 cards.
+              Put your commander or commanders in the command zone, then shuffle
+              the remaining cards.
             </p>
           </div>
           <DeckSplit />
           <div className="setup-caption">
             <p>
-              Without looking at or choosing cards, take the top 40 as your
-              Library. Place the remaining 59 face down as your Archive.
+              Without looking at or choosing cards, take the top 50 as your
+              Library. Place the remaining 49 cards face down as your Archive.
             </p>
             <div className="life-callout">
               <span>30</span>

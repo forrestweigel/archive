@@ -30,7 +30,7 @@ Use **shadcn/ui components for the frontend**.
 - Use Tailwind CSS for styling and layout in the normal shadcn/ui pattern.
 - Extend shadcn components through project styling rather than introducing a competing component library.
 - Do not add another general-purpose frontend component framework without explicit approval.
-- Keep custom components focused on Archive-specific presentation such as the 99 → 40 + 59 setup diagram.
+- Keep custom components focused on Archive-specific presentation such as the 50-card Library setup diagram.
 
 ## Visual direction
 
@@ -70,7 +70,9 @@ The key onboarding message is that **players use their existing legal Commander 
 
 The defining setup visual is:
 
-`99 cards → 40-card Library + 59-card Archive`
+`99 cards → 50-card Library + 49-card Archive`
+
+Use 50/49 in standard setup copy and visuals. The rules and FAQ clarify that the Library starts with 50 cards and all remaining deck cards become the Archive, which may not contain exactly 49 cards. Keep this clarification general; do not enumerate edge cases.
 
 ## Planned site areas
 

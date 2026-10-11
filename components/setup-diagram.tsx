@@ -2,11 +2,11 @@ import { ArrowRight, Layers, Plus, Shuffle } from "lucide-react";
 
 export function SetupDiagram() {
   return (
-    <svg className="setup-diagram" viewBox="0 0 440 190" role="img" aria-label="Split the shuffled 99 cards into a 40-card Library and a 59-card face-down Archive.">
+    <svg className="setup-diagram" viewBox="0 0 440 190" role="img" aria-label="Split the shuffled 99 cards into a 50-card Library and a 49-card face-down Archive.">
       {[
         { x: 12, icon: Shuffle, count: "99", label: "SHUFFLED", caption: "Shuffle first" },
-        { x: 175, icon: Layers, count: "40", label: "LIBRARY", caption: "The top 40 cards" },
-        { x: 334, icon: Layers, count: "59", label: "ARCHIVE", caption: "The rest, face down" },
+        { x: 175, icon: Layers, count: "50", label: "LIBRARY", caption: "The top 50 cards" },
+        { x: 334, icon: Layers, count: "49", label: "ARCHIVE", caption: "The rest, face down" },
       ].map(({ x, icon: Icon, count, label, caption }) => (
         <g key={count} transform={`translate(${x} 6)`}>
           <Icon x={15} y={0} size={52} strokeWidth={1.5} aria-hidden="true" />

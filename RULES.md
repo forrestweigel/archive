@@ -7,21 +7,20 @@ Archive is a variant of Commander designed to be played with an existing legal C
 
 ## 1. Deck
 
-Each player brings a normal legal Commander deck consisting of:
-
-- 1 commander
-- 99 other cards
+Each player brings a normal legal Commander deck of 100 cards, including their commander or commanders.
 
 Archive does not require players to rebuild or modify their Commander decks.
 
 ## 2. Setup
 
-1. Remove your commander from the deck and place it in the command zone as normal.
-2. Shuffle the remaining 99 cards.
-3. Without looking at or choosing cards, make the top 40 cards your **Library**.
-4. Place the remaining 59 cards face down as your **Archive**.
+1. Remove your commander or commanders from the deck and place them in the command zone as normal.
+2. Shuffle all remaining cards.
+3. Without looking at or choosing cards, make the top 50 cards your **Library**.
+4. Place all remaining cards face down as your **Archive**.
 5. Each player begins the game with **30 life**.
 6. Continue normal Commander setup and begin the game.
+
+The standard split is a 50-card Library and a 49-card Archive. The Library always starts with 50 cards before normal Commander setup continues. All remaining deck cards become the Archive, so it may not contain exactly 49 cards.
 
 The Archive is separate from the Library. Cards in the Archive can only be accessed or moved by Archive-specific rules.
 
