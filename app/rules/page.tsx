@@ -109,22 +109,6 @@ export default function Rules() {
               </div>
             </CardContent>
           </Card>
-          <Card className="lg:col-span-2">
-            <CardHeader>
-              <CardTitle>Research: spend mana for another card</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-sm leading-7 text-muted-foreground">
-              <p>
-                On your turn, at sorcery speed, pay {archiveFormat.researchManaCost} mana of any type. Put the top card of your
-                Archive into your hand. You keep the cards already in your hand.
-              </p>
-              <p>
-                You have used Research for this turn, but you may still use Exchange
-                if you haven&apos;t already. Research puts the card into your hand;
-                it does not count as drawing a card.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </section>
       <ReferenceCard />
