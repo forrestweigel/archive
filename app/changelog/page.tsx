@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import { createPageMetadata } from "@/lib/metadata";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -7,7 +8,7 @@ import { getChangelog } from "@/lib/archive";
 import theFey from "@/app/artwork/the_fey.jpg";
 export const metadata = createPageMetadata({
   title: "Changelog",
-  description: "See shipped Archive rules releases and what changed. Read the current Archive Alpha rules and release history.",
+  description: `See shipped Archive rules releases and what changed. Read the current Archive ${archiveFormat.release} rules and release history.`,
   path: "/changelog",
 });
 export default function Changelog() {

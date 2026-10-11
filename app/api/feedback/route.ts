@@ -1,3 +1,4 @@
+import { archiveFormat } from "../../../lib/format.mjs";
 import { createHash } from "node:crypto";
 
 const fields = [
@@ -75,7 +76,7 @@ export async function POST(request: Request) {
     return error("Feedback delivery is not available yet. Your answers are still here; please try again later.", 503);
   }
   const text = [
-    "ARCHIVE ALPHA: PLAYTEST REPORT",
+    `ARCHIVE ${archiveFormat.release.toUpperCase()}: PLAYTEST REPORT`,
     ...fields.map(([key, label]) => `${label}: ${answers[key] || "Not provided"}`),
   ].join("\n\n");
   // Retries of unchanged answers reuse the key; edited answers get a new key.
@@ -88,7 +89,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
         "Idempotency-Key": `feedback/${data.submissionId}/${hash}`,
       },
-      body: JSON.stringify({ from, to: [to], subject: "Archive Alpha playtest feedback", text }),
+      body: JSON.stringify({ from, to: [to], subject: `Archive ${archiveFormat.release} playtest feedback`, text }),
       signal: AbortSignal.timeout(10000),
     });
     if (!response.ok) {

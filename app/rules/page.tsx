@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import { createPageMetadata } from "@/lib/metadata";
 import Markdown from "react-markdown";
 import Image from "next/image";
@@ -10,7 +11,7 @@ import { ReferenceCard } from "@/components/reference-card";
 import spirit from "@/app/artwork/spirit.jpg";
 export const metadata = createPageMetadata({
   title: "Rules & reference",
-  description: "Read the complete Archive Alpha rules and print or save the reference card for your table.",
+  description: `Read the complete Archive ${archiveFormat.release} rules and print or save the reference card for your table.`,
   path: "/rules",
 });
 export default function Rules() {
@@ -24,7 +25,7 @@ export default function Rules() {
       />
       <div className="no-print shell section-pad grid gap-12 lg:grid-cols-[230px_1fr]">
         <aside>
-          <p className="eyebrow mb-6">ARCHIVE ALPHA</p>
+          <p className="eyebrow mb-6">ARCHIVE {archiveFormat.release.toUpperCase()}</p>
           <Button asChild variant="outline">
             <Link href="#reference-card">Get the reference card</Link>
           </Button>

@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { createPageMetadata } from "@/lib/metadata";
@@ -51,7 +52,7 @@ export default function About() {
       <section className="shell section-pad" aria-labelledby="goals-title">
         <div className="section-heading">
           <h2 id="goals-title">WHY ARCHIVE EXISTS</h2>
-          <p>These are design goals. Alpha playtesting explores how well the rules achieve them across different decks and tables.</p>
+          <p>These are design goals. {archiveFormat.release} playtesting explores how well the rules achieve them across different decks and tables.</p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {goals.map((goal, index) => (

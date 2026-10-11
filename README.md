@@ -51,11 +51,14 @@ When an owner-approved release (such as Beta) is ready:
 2. Prepend a release entry to `CHANGELOG.md` with its confirmed publication date
    and concrete changes from the previous release. Leave prior entries intact.
    Do not add unreleased entries or invent a date for the existing Alpha entry.
-3. Update current-release labels in the site, metadata, download filenames and
-   report and email headings, plus `AGENTS.md` and the Archive skill. Review homepage and
-   FAQ summaries against the new rules. The rules page and reference card read
-   their rules directly from `RULES.md`.
-4. Run lint and the production build; check the rules, changelog, reference
+3. Update `lib/format.mjs` to match the approved rules. Pages, diagrams, metadata,
+   download filenames, and email headings use this shared configuration. The
+   standard Archive size is derived from the deck and Library sizes. Review
+   `AGENTS.md`, the Archive skill, and FAQ wording for any rule changes. The rules
+   page and reference mechanics continue to read `RULES.md` directly.
+4. Run `npm run share-card:html`, then regenerate the share image as described below.
+   Run `npm test` to check agreement with the canonical rules and generated HTML.
+5. Run lint and the production build; check the rules, changelog, reference
    download, and playtest report. The changelog's current-rules link always goes
    to `/rules`; do not label it as an older release's rules.
 
@@ -68,8 +71,9 @@ edits belong in Git history, not the public rules changelog.
 `lib/metadata.ts` defines shared Open Graph and Twitter card settings. Each page
 sets its own description, title, and canonical URL. The preview image is the
 1200 × 630 PNG at `public/brand/share-card.png`; its editable layout is
-`scripts/share-card.html`. Keep its setup numbers and release label in sync with
-`RULES.md` when publishing a rules release.
+`scripts/share-card.template.html`. Run `npm run share-card:html` to generate
+`scripts/share-card.html` using `lib/format.mjs`. Do not edit the generated HTML
+directly. Commit it with the template and configuration changes.
 
 To regenerate the image, open the HTML in Chromium at a 1200 × 630 viewport,
 wait for images and fonts to finish loading, and capture the viewport as a PNG.

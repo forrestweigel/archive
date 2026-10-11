@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "share-card:html": "node scripts/generate-share-card.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.21",

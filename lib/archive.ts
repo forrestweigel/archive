@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -24,15 +25,15 @@ export const faqs = [
   ],
   [
     "Do I need to build a new deck?",
-    "No. Bring an existing legal Commander deck of 100 cards, including your commander or commanders. Archive does not require you to rebuild or modify it.",
+    `No. Bring an existing legal Commander deck of ${archiveFormat.deckSize} cards, including your commander or commanders. Archive does not require you to rebuild or modify it.`,
   ],
   [
     "Can I choose which cards go into my Library?",
-    "No. Put your commander or commanders in the command zone, shuffle the remaining cards, then take the top 50 as your Library without looking at or choosing cards. All remaining cards become your face-down Archive.",
+    `No. Put your commander or commanders in the command zone, shuffle the remaining cards, then take the top ${archiveFormat.librarySize} as your Library without looking at or choosing cards. All remaining cards become your face-down Archive.`,
   ],
   [
-    "Does the Archive always start with 49 cards?",
-    "Not necessarily. Take the top 50 cards of your shuffled deck for your Library, then put the rest into your Archive. That will usually be 49 cards.",
+    `Does the Archive always start with ${archiveFormat.standardArchiveSize} cards?`,
+    `Not necessarily. Take the top ${archiveFormat.librarySize} cards of your shuffled deck for your Library, then put the rest into your Archive. That will usually be ${archiveFormat.standardArchiveSize} cards.`,
   ],
   [
     "Can I search or look through my Archive?",

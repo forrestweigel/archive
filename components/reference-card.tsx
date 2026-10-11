@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { PrintButton } from "@/components/print-button";
@@ -18,15 +19,15 @@ export function ReferenceCard() {
         <div className="reference-grid grid gap-6 lg:grid-cols-2">
           <section className="reference-sheet">
             <Image src="/brand/full-no-background.png" alt="Archive: Shuffle. Split. Play." width={1305} height={242} className="h-auto w-full max-w-80" />
-            <p className="eyebrow mt-4 text-primary">ALPHA</p>
+            <p className="eyebrow mt-4 text-primary">{archiveFormat.release.toUpperCase()}</p>
             <h2 className="reference-setup-heading">Set up your game</h2>
             <div className="reference-commander">
               <p>Put your commander or commanders in the command zone. Shuffle the remaining cards.</p>
             </div>
             <SetupDiagram />
-            <p className="reference-split-note">Take the top 50 without looking at or choosing cards. Place the remaining 49 cards face down as your Archive.</p>
+            <p className="reference-split-note">Take the top {archiveFormat.librarySize} without looking at or choosing cards. Place the remaining {archiveFormat.standardArchiveSize} cards face down as your Archive.</p>
             <div className="reference-life">
-              <strong className="reference-life-total">30</strong>
+              <strong className="reference-life-total">{archiveFormat.startingLife}</strong>
               <div><h3>Starting life</h3><p>Continue normal Commander setup.</p></div>
             </div>
             <p className="reference-reminder">

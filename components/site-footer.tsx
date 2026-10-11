@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import Link from "next/link";
 import Image from "next/image";
 export function SiteFooter() {
@@ -27,7 +28,7 @@ export function SiteFooter() {
             Archive is not affiliated with or endorsed by Wizards of the Coast.
           </p>
           <span className="shrink-0 uppercase tracking-[.18em]">
-            Archive Alpha
+            Archive {archiveFormat.release}
           </span>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { faqs } from "@/lib/archive";
@@ -11,7 +12,7 @@ import {
 } from "@/components/ui/accordion";
 export const metadata = createPageMetadata({
   title: "Frequently asked questions",
-  description: "Answers to Archive Alpha questions about your existing Commander deck, the face-down Archive, search restrictions, and Exchange timing.",
+  description: `Answers to Archive ${archiveFormat.release} questions about your existing Commander deck, the face-down Archive, search restrictions, and Exchange timing.`,
   path: "/faq",
 });
 export default function FAQ() {

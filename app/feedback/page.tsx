@@ -1,10 +1,11 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import { createPageMetadata } from "@/lib/metadata";
 import { PageIntro } from "@/components/page-intro";
 import { FeedbackForm } from "@/components/feedback-form";
 import troop from "@/app/artwork/troop.jpg";
 export const metadata = createPageMetadata({
   title: "Playtest feedback",
-  description: "Share feedback from an Archive Alpha game, including game length, Archive use, and rules questions.",
+  description: `Share feedback from an Archive ${archiveFormat.release} game, including game length, Archive use, and rules questions.`,
   path: "/feedback",
 });
 export default function Feedback() {
@@ -12,7 +13,7 @@ export default function Feedback() {
     <>
       <PageIntro
         artwork={troop}
-        eyebrow="ARCHIVE ALPHA"
+        eyebrow={`ARCHIVE ${archiveFormat.release.toUpperCase()}`}
         title="Playtest feedback"
         description="Tell us how your game went. Submit your playtest feedback directly to Archive."
       />

@@ -1,3 +1,4 @@
+import { archiveFormat } from "@/lib/format.mjs";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Circle } from "lucide-react";
@@ -27,7 +28,7 @@ export default function Home() {
         </div>
         <div className="shell hero-content">
           <p className="eyebrow">
-            <Circle className="status-dot" fill="currentColor" aria-hidden="true" /> ARCHIVE ALPHA · A COMMANDER VARIANT
+            <Circle className="status-dot" fill="currentColor" aria-hidden="true" /> ARCHIVE {archiveFormat.release.toUpperCase()} · A COMMANDER VARIANT
           </p>
           <h1>
             SHUFFLE.
@@ -71,11 +72,11 @@ export default function Home() {
           <DeckSplit />
           <div className="setup-caption">
             <p>
-              Without looking at or choosing cards, take the top 50 as your
-              Library. Place the remaining 49 cards face down as your Archive.
+              Without looking at or choosing cards, take the top {archiveFormat.librarySize} as your
+              Library. Place the remaining {archiveFormat.standardArchiveSize} cards face down as your Archive.
             </p>
             <div className="life-callout">
-              <span>30</span>
+              <span>{archiveFormat.startingLife}</span>
               <div>
                 STARTING LIFE<small>Continue normal Commander setup.</small>
               </div>

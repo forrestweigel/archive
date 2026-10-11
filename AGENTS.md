@@ -127,7 +127,7 @@ Use concise explanations. The homepage should teach the format quickly; `RULES.m
 When implementing:
 
 - Reuse shadcn/ui components before creating generic UI primitives.
-- Keep rules content easy to update.
+- Keep rules content easy to update. Read presentation values from `lib/format.mjs`; do not hard-code setup numbers or release labels in application code. Keep the configuration aligned with `RULES.md` and regenerate share-card HTML after changes.
 - Avoid duplicating canonical rule text across hard-coded components when a maintainable content source is practical.
 - Preserve responsive behavior and accessibility.
 - Do not let visual polish obscure rules clarity.
