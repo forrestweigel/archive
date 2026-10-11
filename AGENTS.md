@@ -117,8 +117,11 @@ Capitalize defined format terms consistently:
 
 - Archive
 - Library
-- Failed Search
+- Discovery
 - Exchange
+- Research
+
+Discovery applies when a Library search finds zero cards. Exchange and Research are each available once during each of your turns, as a sorcery, with separate limits. Research costs {4}; it does not require an empty hand. All three mechanics put the top Archive card into hand without drawing it.
 
 Use concise explanations. The homepage should teach the format quickly; `RULES.md` should drive the detailed rules page and FAQ.
 

@@ -1,4 +1,5 @@
-import { ArrowRight, GalleryHorizontalEnd, Layers, SearchX } from "lucide-react";
+import { ArrowRight, BookOpen, GalleryHorizontalEnd, Layers, SearchX } from "lucide-react";
+import { archiveFormat } from "@/lib/format.mjs";
 
 function CardMovement({
   from,
@@ -29,7 +30,7 @@ function CardMovement({
   );
 }
 
-export function MechanicDiagram({ type }: { type: "search" | "exchange" }) {
+export function MechanicDiagram({ type }: { type: "discovery" | "exchange" | "research" }) {
   return (
     <div className="mechanic-diagram">
       {type === "exchange" ? (
@@ -40,8 +41,17 @@ export function MechanicDiagram({ type }: { type: "search" | "exchange" }) {
       ) : (
         <div className="search-steps">
           <div className="search-trigger">
-            <SearchX strokeWidth={1.5} aria-hidden="true" />
-            <span>Search finds <strong>zero cards</strong></span>
+            {type === "research" ? (
+              <>
+                <BookOpen strokeWidth={1.5} aria-hidden="true" />
+                <span>Pay <strong>{archiveFormat.researchManaCost} mana of any type</strong></span>
+              </>
+            ) : (
+              <>
+                <SearchX strokeWidth={1.5} aria-hidden="true" />
+                <span>Search finds <strong>zero cards</strong></span>
+              </>
+            )}
           </div>
           <CardMovement from="archive" instruction="Take the top card of your Archive and put it in your hand" />
         </div>

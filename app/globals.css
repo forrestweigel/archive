@@ -395,7 +395,7 @@ h2 {
   height: 24px;
   flex-shrink: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .mechanics-grid > .mechanic-card {
     display: grid;
     grid-row: span 4;
@@ -641,7 +641,7 @@ h2 {
   font-size: 12px;
   line-height: 1.7;
 }
-.reference-exchange-heading {
+.reference-mechanic-heading {
   border-top: 1px solid var(--border);
   padding-top: 20px;
   margin-top: 22px;
@@ -837,39 +837,15 @@ h2 {
     gap: 16px !important;
   }
   .reference-sheet .prose-rules {
-    font-size: 9pt;
+    font-size: 10pt;
     line-height: 1.55;
   }
   .reference-sheet .prose-rules p {
     margin-block: 8px;
   }
   .reference-sheet .mechanic-diagram {
-    margin-block: 6px;
-  }
-  .reference-sheet .card-movement {
-    row-gap: 4px;
-  }
-  .reference-sheet .movement-endpoint {
-    gap: 4px;
-  }
-  .reference-sheet .movement-endpoint > span {
-    font-size: 10px;
-  }
-  .reference-sheet .movement-endpoint > svg {
-    width: 28px;
-    height: 28px;
-  }
-  .reference-sheet .movement-arrow {
-    width: 24px;
-    height: 24px;
-  }
-  .reference-sheet .movement-instruction,
-  .reference-sheet .search-trigger {
-    font-size: 11px;
-  }
-  .reference-sheet .exchange-steps,
-  .reference-sheet .search-steps {
-    gap: 6px;
+    /* The rules already describe each movement; leave room for all three mechanics. */
+    display: none;
   }
   .reference-sheet .setup-diagram {
     max-height: 150px;
@@ -888,7 +864,7 @@ h2 {
   .reference-footer {
     margin-top: 16px;
   }
-  .reference-exchange-heading {
+  .reference-mechanic-heading {
     margin-top: 16px;
     padding-top: 16px;
   }

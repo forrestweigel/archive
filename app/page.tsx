@@ -91,14 +91,14 @@ export default function Home() {
               <h2>USING YOUR ARCHIVE</h2>
             </div>
             <p>
-              Your Archive stays face down, separate from your Library. Two
+              Your Archive stays face down, separate from your Library. Three
               rules let you move cards into your hand.
             </p>
           </div>
-          <div className="mechanics-grid grid gap-6 md:grid-cols-2">
+          <div className="mechanics-grid grid gap-6 lg:grid-cols-3">
             <Card className="mechanic-card">
               <CardHeader>
-                <CardTitle>Failed Search</CardTitle>
+                <CardTitle>Discovery</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>
@@ -106,7 +106,7 @@ export default function Home() {
                   <strong>zero cards</strong>, put the top card of your Archive
                   into your hand.
                 </p>
-                <MechanicDiagram type="search" />
+                <MechanicDiagram type="discovery" />
                 <p className="text-sm text-white/50">
                   Finding one or more cards doesn&apos;t count. Normal Magic rules
                   determine whether you may find zero.
@@ -127,6 +127,22 @@ export default function Home() {
                 <MechanicDiagram type="exchange" />
                 <p className="text-sm text-white/50">
                   Exchange doesn&apos;t discard or exile the card.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="mechanic-card">
+              <CardHeader>
+                <CardTitle>Research</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  <strong>Once during each of your turns</strong>, <strong>as a sorcery</strong>,
+                  you may pay <strong>{`{${archiveFormat.researchManaCost}}`}</strong>.
+                  If you do, put the top card of your Archive into your hand.
+                </p>
+                <MechanicDiagram type="research" />
+                <p className="text-sm text-white/50">
+                  You may use both Research and Exchange during the same turn.
                 </p>
               </CardContent>
             </Card>
@@ -171,7 +187,7 @@ export default function Home() {
                 artwork: animalBand,
                 position: "center 60%",
                 title: "Frequently asked questions",
-                text: "Search restrictions, Exchange timing, and an empty Library.",
+                text: "Discovery, Exchange, Research, and an empty Library.",
                 href: "/faq",
                 cta: "Read the FAQ",
               },

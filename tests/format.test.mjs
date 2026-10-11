@@ -18,6 +18,7 @@ test("presentation values agree with the canonical rules", () => {
   assert.equal(Number(capture(/top (\d+) cards your \*\*Library\*\*/)), archiveFormat.librarySize);
   assert.equal(Number(capture(/begins the game with \*\*(\d+) life\*\*/)), archiveFormat.startingLife);
   assert.equal(Number(capture(/usually (\d+) cards/)), archiveFormat.standardArchiveSize);
+  assert.equal(Number(capture(/you may pay \{(\d+)\}/)), archiveFormat.researchManaCost);
   assert.equal(archiveFormat.librarySize + archiveFormat.standardArchiveSize, archiveFormat.standardDeckSize);
 });
 

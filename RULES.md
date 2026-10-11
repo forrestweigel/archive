@@ -24,11 +24,11 @@ Your starting Library is always 50 cards. Your Archive is the rest of the shuffl
 
 The Archive is separate from the Library. Cards in the Archive can only be accessed or moved by Archive-specific rules.
 
-## 3. Failed Search
+## 3. Discovery
 
 **Whenever you search your Library and that search finds zero cards, put the top card of your Archive into your hand.**
 
-A search that finds one or more cards is not a Failed Search, even if the effect allowed or instructed you to find more cards than you actually found.
+A search that finds one or more cards does not cause Discovery, even if the effect allowed or instructed you to find more cards than you actually found.
 
 Normal Magic rules determine whether a player is permitted to find zero cards during a particular search.
 
@@ -38,21 +38,29 @@ Normal Magic rules determine whether a player is permitted to find zero cards du
 
 Exchange does not discard or exile the card placed into the Archive.
 
-## 5. The Archive
+## 5. Research
+
+**Once during each of your turns, as a sorcery, you may pay {4}. If you do, put the top card of your Archive into your hand.**
+
+Research and Exchange have separate once-per-turn limits. You may use both during the same turn.
+
+## 6. The Archive
 
 The Archive is kept face down.
+
+Putting a card from your Archive into your hand through Discovery, Exchange, or Research is not drawing a card.
 
 A card placed into the Archive by Exchange is placed on the bottom, and the card received is taken from the top.
 
 Ordinary Magic effects do not treat the Archive as the Library, hand, graveyard, exile, command zone, or any other normal game zone. The Archive can only be interacted with as specifically provided by Archive rules.
 
-## 6. Library and Losing the Game
+## 7. Library and Losing the Game
 
 The Archive is not a backup Library.
 
 Normal Magic rules for drawing from an empty Library continue to apply. Cards do not automatically move from the Archive to the Library when the Library becomes empty.
 
-## 7. Commander Rules
+## 8. Commander Rules
 
 Except for the changes stated in this document, normal Commander rules apply.
 

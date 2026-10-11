@@ -96,8 +96,19 @@ export function FeedbackForm() {
           />
         </div>
         <div>
+          <label htmlFor="research" className="form-label">
+            How often did players use Research?
+          </label>
+          <Input
+            id="research"
+            name="research"
+            maxLength={500}
+            placeholder="A rough estimate is fine"
+          />
+        </div>
+        <div>
           <label htmlFor="search" className="form-label">
-            Did Failed Search occur, and how did it affect the game?
+            Did Discovery occur, and how did it affect the game?
           </label>
           <Textarea
             id="search"

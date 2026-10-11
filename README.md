@@ -33,7 +33,9 @@ No database is required. Feedback email delivery requires the server settings be
 
 Read `AGENTS.md` and `.agents/skills/archive-format/SKILL.md` before changing
 rules or presentation. Keep homepage summaries and the FAQ consistent with
-`RULES.md`. The reference card also reads its rule sections from that file.
+`RULES.md`. The reference card also reads its Discovery, Exchange, and Research
+sections from that file. The Research mana cost is shared through `lib/format.mjs`
+and checked against the canonical rules by `npm test`.
 
 The hero and resource cards use owner-supplied fantasy artwork; navigation,
 footer, reference card, and favicon use the supplied logo variants.

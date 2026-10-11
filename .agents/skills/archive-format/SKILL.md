@@ -38,7 +38,7 @@ Archive has six design goals:
 
 These address repetitive play, reliance on exact-card plans, long games, power gaps, mana problems, and the burden of rebuilding. No rebuilding is a goal in its own right, not merely a constraint.
 
-The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Failed Search provides a fallback for unsuccessful searches.
+The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Discovery provides a fallback for unsuccessful searches. Research lets players spend four mana for another card from the Archive.
 
 Keep design intentions separate from demonstrated outcomes. Alpha playtesting explores whether and how consistently these goals are achieved; do not promise equal power, shorter games, or freedom from mana problems. Improvisation and adapting to available cards support the goals, but should not replace the explanation of why Archive exists.
 
@@ -46,7 +46,7 @@ The format should remain easy to explain and physically easy to play.
 
 ## Signature mechanics
 
-### Failed Search
+### Discovery
 
 When a Library search finds zero cards, the player puts the top card of their Archive into their hand.
 
@@ -63,6 +63,12 @@ Conceptually:
 `top of ARCHIVE → HAND`
 
 Exchange is a one-for-one exchange. It keeps the Archive central to gameplay while preserving its unknown top card.
+
+### Research
+
+Once during each of their turns, as a sorcery, a player may pay {4}. If they do, they put the top card of their Archive into their hand. This is four generic mana and does not require an empty hand.
+
+Exchange and Research each have their own once-per-turn limit, so both may be used in the same turn. Discovery, Exchange, and Research put cards into hand; none of these actions is a card draw.
 
 ## Design principles
 
@@ -98,11 +104,16 @@ The face-down pile of 49 cards in the standard setup. It is separate from the Li
 **Library**  
 The Library always starts with 50 cards from the shuffled deck during Archive setup, before normal Commander setup continues.
 
-**Failed Search**  
+**Discovery**
+
 The Archive rule that applies when a Library search finds zero cards.
 
 **Exchange**  
 The once-per-turn sorcery-speed format action that puts a card from hand on the bottom of the Archive and moves the top Archive card into hand.
+
+**Research**
+
+The once-per-turn sorcery-speed format action that costs {4} and puts the top Archive card into hand. It has a separate limit from Exchange.
 
 **Alpha**  
 The current public release designation. Prefer `Archive Alpha` when context is needed.
@@ -185,9 +196,10 @@ A first-time visitor should understand Archive in this order:
 3. **Understand why Archive exists: its six design goals.**
 4. **Put your commander or commanders in the command zone, shuffle the remaining deck, and take 50 cards as your Library. The remaining 49 cards become your Archive.**
 5. **Start at 30 life.**
-6. **Learn Failed Search.**
+6. **Learn Discovery.**
 7. **Learn Exchange.**
-8. **Everything else follows normal Commander rules.**
+8. **Learn Research.**
+9. **Everything else follows normal Commander rules.**
 
 The visual centerpiece should be the setup transformation:
 
@@ -201,7 +213,7 @@ Do not bury this below extensive explanation.
 
 ### Home / How to Play
 
-Fast onboarding with a brief statement of purpose, setup diagram, starting life, and the two Archive mechanics. Keep the hero paragraph close to its existing length; use the setup section for the numbers rather than repeating them in the hero.
+Fast onboarding with a brief statement of purpose, setup diagram, starting life, and the three Archive mechanics. Keep the hero paragraph close to its existing length; use the setup section for the numbers rather than repeating them in the hero.
 
 ### Rules & Reference
 
@@ -222,7 +234,8 @@ Collect structured feedback useful for Alpha development. Useful fields may incl
 - Player count
 - Approximate game duration
 - Number or frequency of Exchanges
-- Whether Failed Search occurred and mattered
+- Number or frequency of Research uses
+- Whether Discovery occurred and mattered
 - How the game ended
 - Whether the smaller Library materially affected the game
 - Rules confusion encountered
@@ -251,8 +264,9 @@ Front:
 
 Back:
 
-- Failed Search
+- Discovery
 - Exchange
+- Research
 
 Use large readable typography and simple visual sequences. Avoid excessive numbered steps, repeated reminders, or explanations of ordinary Commander rules.
 

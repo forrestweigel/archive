@@ -6,7 +6,7 @@ const originalFetch = globalThis.fetch;
 const originalEnv = { ...process.env };
 const valid = {
   submissionId: "01234567-89ab-4def-8123-456789abcdef",
-  website: "", players: "4", duration: "60", exchanges: "Often",
+  website: "", players: "4", duration: "60", exchanges: "Often", research: "Twice",
   search: "Once", ending: "Combat", notes: "Good game",
 };
 function request(data = valid, headers = {}) {
@@ -47,7 +47,8 @@ test("sends the complete report only to the configured recipient, with stable re
   assert.match(email.text, /Players: 4/);
   assert.match(email.text, /Game duration \(minutes\): 60/);
   assert.match(email.text, /Exchanges: Often/);
-  assert.match(email.text, /Failed Search: Once/);
+  assert.match(email.text, /Discovery: Once/);
+  assert.match(email.text, /Research: Twice/);
   assert.match(email.text, /Game ending: Combat/);
   assert.match(email.text, /Good game/);
   assert.equal(calls[0].headers["Idempotency-Key"], calls[1].headers["Idempotency-Key"]);
@@ -59,7 +60,7 @@ test("rejects invalid answers and bots without contacting the email service", as
     { players: "1" }, { players: "100" }, { players: "2.5" },
     { duration: "0" }, { duration: "Infinity" }, { duration: 60 },
     { notes: "a".repeat(5001) }, { search: [] }, { website: "spam" },
-    { submissionId: "invalid" },
+    { submissionId: "invalid" }, { research: "a".repeat(501) }, { research: [] },
   ]) {
     assert.equal((await POST(request({ ...valid, ...changes }))).status, 400);
   }

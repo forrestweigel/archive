@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion";
 export const metadata = createPageMetadata({
   title: "Frequently asked questions",
-  description: `Answers to Archive ${archiveFormat.release} questions about your existing Commander deck, the face-down Archive, search restrictions, and Exchange timing.`,
+  description: `Answers to Archive ${archiveFormat.release} questions about your existing Commander deck, the face-down Archive, Discovery, Exchange, and Research.`,
   path: "/faq",
 });
 export default function FAQ() {

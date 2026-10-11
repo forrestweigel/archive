@@ -38,17 +38,22 @@ export function ReferenceCard() {
             </p>
           </section>
           <section className="reference-sheet">
-            <h3>Failed Search</h3>
-            <MechanicDiagram type="search" />
+            <h3>Discovery</h3>
+            <MechanicDiagram type="discovery" />
             <div className="prose-rules">
               <Markdown>{getRuleSection(3)}</Markdown>
             </div>
-            <h3 className="reference-exchange-heading">
+            <h3 className="reference-mechanic-heading">
               Exchange
             </h3>
             <MechanicDiagram type="exchange" />
             <div className="prose-rules">
               <Markdown>{getRuleSection(4)}</Markdown>
+            </div>
+            <h3 className="reference-mechanic-heading">Research</h3>
+            <MechanicDiagram type="research" />
+            <div className="prose-rules">
+              <Markdown>{getRuleSection(5)}</Markdown>
             </div>
             <p className="reference-footer">
               <a href="https://playarchivemtg.com" className="underline underline-offset-4">https://playarchivemtg.com</a>

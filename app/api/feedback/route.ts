@@ -5,7 +5,8 @@ const fields = [
   ["players", "Players", 2],
   ["duration", "Game duration (minutes)", 5],
   ["exchanges", "Exchanges", 500],
-  ["search", "Failed Search", 3000],
+  ["research", "Research", 500],
+  ["search", "Discovery", 3000],
   ["ending", "Game ending", 1000],
   ["notes", "Enjoyment, rules questions, and other feedback", 5000],
 ] as const;

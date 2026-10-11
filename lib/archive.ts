@@ -40,12 +40,24 @@ export const faqs = [
     "No. Ordinary Magic effects do not interact with the Archive. Cards can only be accessed or moved as specifically provided by Archive rules.",
   ],
   [
-    "What counts as a Failed Search?",
-    "A Library search that finds zero cards. Finding one or more cards is not a Failed Search, even if the effect allowed you to find more. Normal Magic rules determine whether you may find zero cards.",
+    "When does Discovery apply?",
+    "Whenever a Library search finds zero cards, put the top card of your Archive into your hand. Finding one or more cards does not cause Discovery, even if the effect allowed you to find more. Normal Magic rules determine whether you may find zero cards.",
   ],
   [
     "When can I use Exchange?",
     "Once during each of your turns, as a sorcery. Put a card from your hand on the bottom of your Archive; if you do, put the top card of your Archive into your hand. This does not discard or exile the card.",
+  ],
+  [
+    "How does Research work?",
+    `Once during each of your turns, as a sorcery, you may pay {${archiveFormat.researchManaCost}} (${archiveFormat.researchManaCost} mana of any type) to put the top card of your Archive into your hand. You do not need an empty hand.`,
+  ],
+  [
+    "Can I use Exchange and Research in the same turn?",
+    "Yes. Each has its own once-per-turn limit, so you may use both during your turn, in either order, at sorcery speed.",
+  ],
+  [
+    "Does taking a card from the Archive count as drawing?",
+    "No. Discovery, Exchange, and Research put a card into your hand without drawing it. Effects that care about drawing cards do not apply to that movement.",
   ],
   [
     "Does the Archive refill an empty Library?",
