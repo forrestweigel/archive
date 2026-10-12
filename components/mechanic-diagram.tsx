@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, GalleryHorizontalEnd, Layers, SearchX } from "lucide-react";
+import { ArrowRight, GalleryHorizontalEnd, Layers, SearchX } from "lucide-react";
 import { archiveFormat } from "@/lib/format.mjs";
 
 function CardMovement({
@@ -42,10 +42,7 @@ export function MechanicDiagram({ type }: { type: "discovery" | "exchange" | "re
         <div className="search-steps">
           <div className="search-trigger">
             {type === "research" ? (
-              <>
-                <BookOpen strokeWidth={1.5} aria-hidden="true" />
-                <span>Pay <strong>{archiveFormat.researchManaCost} mana of any type</strong></span>
-              </>
+              <span>Pay <strong>{archiveFormat.researchManaCost} mana of any type</strong></span>
             ) : (
               <>
                 <SearchX strokeWidth={1.5} aria-hidden="true" />
