@@ -1,7 +1,6 @@
 # Archive: Alpha Rules
 
-**Release:** Alpha  
-**Website:** playarchivemtg.com
+**Release:** Alpha
 
 Archive is a variant of Commander designed to be played with an existing legal Commander deck. Unless these rules say otherwise, normal Commander rules apply.
 
