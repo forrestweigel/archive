@@ -50,7 +50,24 @@ export function MechanicDiagram({ type }: { type: "discovery" | "exchange" | "re
               </>
             )}
           </div>
-          <CardMovement from="archive" instruction="Take the top card of your Archive and put it in your hand" />
+          {type === "research" ? (
+            <div className="card-movement">
+              <span className="movement-instruction">Look at the top card of your Archive</span>
+              <div className="movement-icons">
+                <div className="movement-endpoint">
+                  <Layers strokeWidth={1.5} aria-hidden="true" />
+                  <span>Leave on top</span>
+                </div>
+                <span className="movement-instruction">or</span>
+                <div className="movement-endpoint">
+                  <Layers strokeWidth={1.5} aria-hidden="true" />
+                  <span>Put on bottom</span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <CardMovement from="archive" instruction="Take the top card of your Archive and put it in your hand" />
+          )}
         </div>
       )}
     </div>

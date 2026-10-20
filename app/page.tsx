@@ -91,8 +91,8 @@ export default function Home() {
               <h2>USING YOUR ARCHIVE</h2>
             </div>
             <p>
-              Your Archive stays face down, separate from your Library. Three
-              rules let you move cards into your hand.
+              Your Archive stays face down, separate from your Library.
+              Use Discovery and Exchange to access its cards, and Research to prepare the top card.
             </p>
           </div>
           <div className="mechanics-grid grid gap-6 lg:grid-cols-3">
@@ -138,7 +138,8 @@ export default function Home() {
                 <p>
                   <strong>Once during each of your turns</strong>, <strong>as a sorcery</strong>,
                   you may pay <strong>{archiveFormat.researchManaCost} mana of any type</strong>.
-                  If you do, put the top card of your Archive into your hand.
+                  If you do, look at the top card of your Archive. You may put it
+                  on the bottom of your Archive or leave it on top.
                 </p>
                 <MechanicDiagram type="research" />
                 <p className="text-sm text-white/50">

@@ -37,7 +37,7 @@ export const faqs = [
   ],
   [
     "Can I search or look through my Archive?",
-    "No. Ordinary Magic effects do not interact with the Archive. Cards can only be accessed or moved as specifically provided by Archive rules.",
+    "You cannot search or browse your Archive. Research lets you look at just its top card and put it on the bottom or leave it on top. Ordinary Magic effects cannot access or move Archive cards.",
   ],
   [
     "When does Discovery apply?",
@@ -49,7 +49,7 @@ export const faqs = [
   ],
   [
     "How does Research work?",
-    `Once during each of your turns, as a sorcery, you may pay ${archiveFormat.researchManaCost} mana of any type to put the top card of your Archive into your hand. You do not need an empty hand.`,
+    `Once during each of your turns, as a sorcery, you may pay ${archiveFormat.researchManaCost} mana of any type to look at the top card of your Archive. You may put that card on the bottom of your Archive or leave it on top. Research helps prepare your Archive; use Exchange or Discovery to put a card into your hand.`,
   ],
   [
     "Can I use Exchange and Research in the same turn?",
@@ -57,7 +57,7 @@ export const faqs = [
   ],
   [
     "Does taking a card from the Archive count as drawing?",
-    "No. Discovery, Exchange, and Research put a card into your hand without drawing it. Effects that care about drawing cards do not apply to that movement.",
+    "No. Discovery and Exchange put a card into your hand without drawing it. Effects that care about drawing cards do not apply to that movement. Research does not put a card into your hand.",
   ],
   [
     "Does the Archive refill an empty Library?",

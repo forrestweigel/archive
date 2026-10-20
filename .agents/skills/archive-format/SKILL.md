@@ -38,7 +38,7 @@ Archive has six design goals:
 
 These address repetitive play, reliance on exact-card plans, long games, power gaps, mana problems, and the burden of rebuilding. No rebuilding is a goal in its own right, not merely a constraint.
 
-The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Discovery provides a fallback for unsuccessful searches. Research lets players spend four mana for another card from the Archive.
+The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Discovery provides a fallback for unsuccessful searches. Research lets players spend three mana to look at the top Archive card and put it on the bottom or leave it on top, helping prepare a later Exchange or Discovery.
 
 Keep design intentions separate from demonstrated outcomes. Alpha playtesting explores whether and how consistently these goals are achieved; do not promise equal power, shorter games, or freedom from mana problems. Improvisation and adapting to available cards support the goals, but should not replace the explanation of why Archive exists.
 
@@ -62,13 +62,13 @@ Conceptually:
 
 `top of ARCHIVE → HAND`
 
-Exchange is a one-for-one exchange. It keeps the Archive central to gameplay while preserving its unknown top card.
+Exchange is a one-for-one exchange. It keeps the Archive central to gameplay. Research can help prepare the top card before an Exchange.
 
 ### Research
 
-Once during each of their turns, as a sorcery, a player may pay 4 mana of any type. If they do, they put the top card of their Archive into their hand. Research does not require an empty hand.
+Once during each of their turns, as a sorcery, a player may pay 3 mana of any type. If they do, they look at the top card of their Archive and may put it on the bottom of their Archive or leave it on top. Research does not put a card into hand.
 
-Exchange and Research each have their own once-per-turn limit, so both may be used in the same turn. Discovery, Exchange, and Research put cards into hand; none of these actions is a card draw.
+Exchange and Research each have their own once-per-turn limit, so both may be used in the same turn. Discovery and Exchange put cards into hand without drawing them. Research only lets the player inspect the top Archive card and choose whether to keep it there or put it on the bottom. Do not use the Magic keyword scry as a substitute for this explicit Archive rule; ordinary scry affects the Library.
 
 ## Design principles
 
@@ -78,9 +78,9 @@ When proposing website copy, UI, examples, or future features, preserve these pr
 
 Archive's strongest onboarding benefit is that it requires no special deckbuilding. Avoid language that implies players need an Archive-specific deck.
 
-### The Archive stays unknown
+### The Archive stays face down
 
-Players receive the top card of the Archive rather than searching it. Do not casually introduce browsing, choosing, revealing, tutoring, or rearranging the Archive.
+Discovery and Exchange take the top Archive card rather than searching the pile. Research is the specific exception that lets a player look at the top card and put it on the bottom or leave it on top. Do not introduce browsing, revealing, tutoring, or other ways to rearrange the Archive.
 
 ### Variance is intentional
 
@@ -113,7 +113,7 @@ The once-per-turn sorcery-speed format action that puts a card from hand on the 
 
 **Research**
 
-The once-per-turn sorcery-speed format action that costs 4 mana of any type and puts the top Archive card into hand. It has a separate limit from Exchange.
+The once-per-turn sorcery-speed format action that costs 3 mana of any type and lets the player look at the top Archive card, then put it on the bottom or leave it on top. It has a separate limit from Exchange.
 
 **Alpha**  
 The current public release designation. Prefer `Archive Alpha` when context is needed.
