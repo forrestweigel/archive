@@ -1,4 +1,4 @@
-import { ArrowRight, GalleryHorizontalEnd, Layers, SearchX } from "lucide-react";
+import { ArrowRight, ChevronsDown, ChevronsUp, GalleryHorizontalEnd, Layers, SearchX } from "lucide-react";
 import { archiveFormat } from "@/lib/format.mjs";
 
 function CardMovement({
@@ -55,12 +55,12 @@ export function MechanicDiagram({ type }: { type: "discovery" | "exchange" | "re
               <span className="movement-instruction">Look at the top card of your Archive</span>
               <div className="movement-icons">
                 <div className="movement-endpoint">
-                  <Layers strokeWidth={1.5} aria-hidden="true" />
+                  <ChevronsUp strokeWidth={1.5} aria-hidden="true" />
                   <span>Leave on top</span>
                 </div>
                 <span className="movement-instruction">or</span>
                 <div className="movement-endpoint">
-                  <Layers strokeWidth={1.5} aria-hidden="true" />
+                  <ChevronsDown strokeWidth={1.5} aria-hidden="true" />
                   <span>Put on bottom</span>
                 </div>
               </div>
