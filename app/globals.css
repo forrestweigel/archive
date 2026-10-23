@@ -838,10 +838,10 @@ h2 {
   }
   .reference-sheet .prose-rules {
     font-size: 10pt;
-    line-height: 1.55;
+    line-height: 1.4;
   }
   .reference-sheet .prose-rules p {
-    margin-block: 8px;
+    margin-block: 6px;
   }
   .reference-sheet .mechanic-diagram {
     /* The rules already describe each movement; leave room for all three mechanics. */
@@ -865,8 +865,8 @@ h2 {
     margin-top: 16px;
   }
   .reference-mechanic-heading {
-    margin-top: 16px;
-    padding-top: 16px;
+    margin-top: 12px;
+    padding-top: 12px;
   }
   .reference-sheet h2 {
     font-size: 25pt;
@@ -874,6 +874,9 @@ h2 {
   .reference-sheet h3 {
     font-size: 18pt;
     line-height: 1.1;
+  }
+  .reference-sheet > h3 {
+    margin-bottom: 8px;
   }
   @page {
     size: A4 landscape;

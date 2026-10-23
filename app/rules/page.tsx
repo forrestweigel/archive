@@ -64,17 +64,22 @@ export default function Rules() {
               />
               <div className="space-y-4 text-sm leading-7 text-muted-foreground">
                 <p>
-                  You already have enough lands. Tap and sacrifice Evolving
-                  Wilds to search your Library, choosing to find no basic
-                  land. This is legal even if basic lands remain in your
-                  Library, because the search specifies a kind of card.
+                  Tap and sacrifice Evolving Wilds to search your Library.
+                  If that search finds no basic land, Discovery applies.
+                  Normal Magic rules still allow you to find zero cards in
+                  a search for a specified kind of card.
                 </p>
                 <p>
-                  Finding zero cards gives you the top card of your Archive
-                  through Discovery. You still shuffle your Library as
-                  Evolving Wilds instructs. You trade the land on the
-                  battlefield for an unknown card in hand, which could still
-                  be another land.
+                  Reveal cards from the top of your Archive one at a time
+                  until you reveal a basic land. You must put that first
+                  basic land onto the battlefield tapped. You cannot skip
+                  it or take a different kind of card into your hand.
+                </p>
+                <p>
+                  Put the other revealed cards on the bottom of your Archive
+                  face down in a random order. If no basic land is revealed,
+                  you get no card and return all revealed cards this way.
+                  You still shuffle your Library as Evolving Wilds instructs.
                 </p>
               </div>
             </CardContent>

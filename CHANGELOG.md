@@ -1,5 +1,9 @@
 # Archive release history
 
+## Alpha Revision 4
+
+- Changed Discovery to reveal Archive cards until the first card that qualifies for the failed Library search. You must take that card where the search specifies, following its instructions for that card. Put the other revealed cards on the bottom in a random order; if none qualify, you get no card.
+
 ## Alpha Revision 3
 
 - Changed Research from taking the top Archive card into hand to looking at it and choosing whether to leave it on top or put it on the bottom. Reduced its cost from 4 to 3 mana of any type; it remains once during each of your turns, as a sorcery.

@@ -38,7 +38,7 @@ Archive has six design goals:
 
 These address repetitive play, reliance on exact-card plans, long games, power gaps, mana problems, and the burden of rebuilding. No rebuilding is a goal in its own right, not merely a constraint.
 
-The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Discovery provides a fallback for unsuccessful searches. Research lets players spend three mana to look at the top Archive card and put it on the bottom or leave it on top, helping prepare a later Exchange or Discovery.
+The random Library split is intended to increase variety, weaken reliable access to tutors' targets and linear packages, and narrow power gaps. The smaller Library and 30 starting life are intended to help games end. Exchange gives players another chance at a useful card when flooded or starved for mana; it does not guarantee a land or nonland card. Discovery provides a fallback for unsuccessful searches while retaining their card restrictions and destination. Players must take the first qualifying Archive card; they cannot skip it or turn a restricted search into an unrelated card. Research lets players spend three mana to look at the top Archive card and put it on the bottom or leave it on top, helping prepare a later Exchange or Discovery.
 
 Keep design intentions separate from demonstrated outcomes. Alpha playtesting explores whether and how consistently these goals are achieved; do not promise equal power, shorter games, or freedom from mana problems. Improvisation and adapting to available cards support the goals, but should not replace the explanation of why Archive exists.
 
@@ -48,9 +48,11 @@ The format should remain easy to explain and physically easy to play.
 
 ### Discovery
 
-When a Library search finds zero cards, the player puts the top card of their Archive into their hand.
+When a Library search finds zero cards, reveal cards from the top of the Archive one at a time until the first card that qualifies for that search or the entire Archive has been revealed. The player must take the first qualifying card and put it where the search specifies, following its instructions for that card. They may not decline that card or continue revealing for a different one.
 
-This gives unsuccessful searches a format-specific fallback without allowing players to look through or select cards from the Archive.
+Put all other revealed cards on the bottom of the Archive face down in a random order. If none qualify, the player gets no card and returns all revealed cards this way. Discovery still provides only one card, even when the original search could find more.
+
+Discovery retains the search's restrictions and destination. For Evolving Wilds, the first basic land goes onto the battlefield tapped. It does not become an arbitrary card in hand.
 
 ### Exchange
 
@@ -68,7 +70,7 @@ Exchange is a one-for-one exchange. It keeps the Archive central to gameplay. Re
 
 Once during each of their turns, as a sorcery, a player may pay 3 mana of any type. If they do, they look at the top card of their Archive and may put it on the bottom of their Archive or leave it on top. Research does not put a card into hand.
 
-Exchange and Research each have their own once-per-turn limit, so both may be used in the same turn. Discovery and Exchange put cards into hand without drawing them. Research only lets the player inspect the top Archive card and choose whether to keep it there or put it on the bottom. Do not use the Magic keyword scry as a substitute for this explicit Archive rule; ordinary scry affects the Library.
+Exchange and Research each have their own once-per-turn limit, so both may be used in the same turn. Exchange puts the top Archive card into hand; Discovery reveals until the first qualifying card and follows the search's destination. Neither action is a card draw. Research only lets the player inspect the top Archive card and choose whether to keep it there or put it on the bottom. Do not use the Magic keyword scry as a substitute for this explicit Archive rule; ordinary scry affects the Library.
 
 ## Design principles
 
@@ -80,7 +82,7 @@ Archive's strongest onboarding benefit is that it requires no special deckbuildi
 
 ### The Archive stays face down
 
-Discovery and Exchange take the top Archive card rather than searching the pile. Research is the specific exception that lets a player look at the top card and put it on the bottom or leave it on top. Do not introduce browsing, revealing, tutoring, or other ways to rearrange the Archive.
+Exchange takes the top Archive card. Research lets a player look at the top card and put it on the bottom or leave it on top. Discovery reveals cards in order until the first qualifying card, then puts the other revealed cards on the bottom face down in a random order. These are specific exceptions; do not introduce unrestricted browsing, choosing a later match, or other ways to access or rearrange the Archive.
 
 ### Variance is intentional
 
@@ -106,7 +108,7 @@ The Library always starts with 50 cards from the shuffled deck during Archive se
 
 **Discovery**
 
-The Archive rule that applies when a Library search finds zero cards.
+The Archive rule that applies when a Library search finds zero cards: reveal until the first qualifying card, take it as the search specifies, and put the other revealed cards on the bottom in a random order.
 
 **Exchange**  
 The once-per-turn sorcery-speed format action that puts a card from hand on the bottom of the Archive and moves the top Archive card into hand.

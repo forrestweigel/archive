@@ -66,7 +66,11 @@ export function MechanicDiagram({ type }: { type: "discovery" | "exchange" | "re
               </div>
             </div>
           ) : (
-            <CardMovement from="archive" instruction="Take the top card of your Archive and put it in your hand" />
+            <ol className="exchange-steps movement-instruction" aria-label="Discovery steps">
+              <li>Reveal from the top until the <strong>first qualifying card</strong>.</li>
+              <li>You must take it <strong>where the search specifies</strong>.</li>
+              <li>Put the rest on the bottom in a random order. No match? You get no card.</li>
+            </ol>
           )}
         </div>
       )}

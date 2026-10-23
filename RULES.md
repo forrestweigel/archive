@@ -25,7 +25,9 @@ The Archive is separate from the Library. Cards in the Archive can only be acces
 
 ## 3. Discovery
 
-**Whenever you search your Library and that search finds zero cards, put the top card of your Archive into your hand.**
+**Whenever you search your Library and that search finds zero cards, reveal cards from the top of your Archive one at a time until you reveal a card that qualifies for that search or have revealed your entire Archive. You must take the first qualifying card and put it where the search specifies, following its instructions for that card.**
+
+Put all other cards revealed this way on the bottom of your Archive face down in a random order. If no card qualifies, you get no card and return all revealed cards this way.
 
 A search that finds one or more cards does not cause Discovery, even if the effect allowed or instructed you to find more cards than you actually found.
 
@@ -47,7 +49,7 @@ Research and Exchange have separate once-per-turn limits. You may use both durin
 
 The Archive is kept face down.
 
-Putting a card from your Archive into your hand through Discovery or Exchange is not drawing a card.
+Moving a card from your Archive through Discovery or Exchange is not drawing a card.
 
 A card placed into the Archive by Exchange is placed on the bottom, and the card received is taken from the top.
 

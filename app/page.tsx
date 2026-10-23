@@ -103,8 +103,9 @@ export default function Home() {
               <CardContent>
                 <p>
                   Whenever you search your Library and find{" "}
-                  <strong>zero cards</strong>, put the top card of your Archive
-                  into your hand.
+                  <strong>zero cards</strong>, reveal cards from the top of your
+                  Archive until you find the <strong>first qualifying card</strong>.
+                  You must take it as the search specifies.
                 </p>
                 <MechanicDiagram type="discovery" />
                 <p className="text-sm text-white/50">

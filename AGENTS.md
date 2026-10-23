@@ -121,7 +121,9 @@ Capitalize defined format terms consistently:
 - Exchange
 - Research
 
-Discovery applies when a Library search finds zero cards. Exchange and Research are each available once during each of your turns, as a sorcery, with separate limits. Research costs 3 mana of any type: look at the top Archive card, then put it on the bottom or leave it on top. Research does not put a card into hand. Discovery and Exchange put the top Archive card into hand without drawing it.
+Discovery applies when a Library search finds zero cards. Reveal Archive cards from the top one at a time until the first card that qualifies for that search or the Archive is exhausted. You must take that first qualifying card and put it where the search specifies, following its instructions for that card. Put all other revealed cards on the bottom face down in a random order; if none qualify, get no card and return all revealed cards this way.
+
+Exchange and Research are each available once during each of your turns, as a sorcery, with separate limits. Research costs 3 mana of any type: look at the top Archive card, then put it on the bottom or leave it on top. Research does not put a card into hand. Exchange puts the top Archive card into hand without drawing it; Discovery is not a card draw either.
 
 Use concise explanations. The homepage should teach the format quickly; `RULES.md` should drive the detailed rules page and FAQ.
 
